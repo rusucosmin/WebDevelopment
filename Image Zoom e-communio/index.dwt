@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="imagezoom.js"></script>
+<title>Untitled Document</title>
+
+<style type="text/css">
+#backgroundPopup {
+    z-index:1;
+    position: fixed;
+    display:none;
+    height:100%;
+    width:100%;
+    background:#000000;
+    top:0px;
+    left:0px;
+}
+#toPopup {
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 10px solid #ccc;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    display: none;
+    font-size: 14px;
+    left: 50%;
+    margin-left: -402px;
+    position: fixed;
+    top: 10%;
+    width: 800px;
+    z-index: 2;
+}
+div.loader {
+    background: url("loading.gif") no-repeat scroll 0 0 transparent;
+    height: 32px;
+    width: 32px;
+    display: none;
+    z-index: 9999;
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    margin-left: -10px;
+}
+div.close {
+    background: url("closebox.png") no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    height: 30px;
+    position: absolute;
+    right: -27px;
+    top: -24px;
+    width: 30px;
+}
+span.ecs_tooltip {
+    background: none repeat scroll 0 0 #000000;
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    display: none;
+    font-size: 11px;
+    height: 16px;
+    opacity: 0.7;
+    padding: 4px 3px 2px 5px;
+    position: absolute;
+    right: -62px;
+    text-align: center;
+    top: -51px;
+    width: 93px;
+}
+span.arrow {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #000000;
+    display: block;
+    height: 1px;
+    left: 40px;
+    position: relative;
+    top: 3px;
+    width: 1px;
+}
+div#popup_content {
+    /*margin: 4px 7px;
+     remove this comment if you want scroll bar
+    overflow-y:scroll;
+    height:200px
+    */
+}
+#popup_content img {
+ 	display: block;
+	margin: auto;	
+}
+
+</style>
+</head>
+    <body>
+        <div id="toPopup">
+            <div class="close"></div>
+            <span class="ecs_tooltip">Press Esc to close <span class="arrow"></span></span>
+            <div id="popup_content">
+                <img />
+            </div>
+        </div>
+        <div class="loader">
+        </div>
+        <div id="backgroundPopup"></div>
+        <div class="container">  
+            <div id="stire_div">
+                <div id="ContentPlaceHolder1_stire_panel">
+                    <img  src="http://www.e-communio.ro/_poze/cmd2.jpg"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
