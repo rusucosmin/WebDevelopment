@@ -1,0 +1,2191 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Primul Razboi Mondial</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css.css" />
+    <style type="text/css">
+        /*Slideshow*/
+        #slideshow {
+            width: 900px;
+            height: 825px;
+            position: absolute;
+            top: 101px;
+            left: 50%;
+            right: 50%;
+            margin-left: -450px;
+            margin-right: -450px;
+        }
+
+        #slideshow #slidesContainer {
+                width: 820px;
+                height: 825px;
+                overflow: auto; /* allow scrollbar */
+                margin: auto;
+        }
+
+        #slideshow #slidesContainer .slide {
+            margin-left: 0 auto;
+            width: 800px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+            height: 825px;
+        }
+
+        .control {
+            display: block;
+            width: 39px;
+            height: 800px;
+            text-indent: -10000px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #leftControl {
+            top: 0;
+            left: 0;
+            background: transparent url(img/left.png) no-repeat 0 0;
+        }
+
+        #rightControl {
+            top: 0;
+            right: 0;
+            background: transparent url(img/right.png) no-repeat 0 0;
+        }
+
+        #pageContainer {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+            #pageContainer h1 {
+                display: block;
+                width: 960px;
+                height: 114px;
+                text-indent: -10000px;
+            }
+
+        .slide h2 {
+        }
+
+        .slide p {
+            width: auto;
+            height: auto;
+        }
+
+        .slide h2 {
+            letter-spacing: -1px;
+        }
+
+        .slide .images {
+            /*opacity:0.4;
+            filter:alpha(opacity=40);*/
+            z-index: -1;
+        }
+
+        /*Second slideshow
+
+            (c) Cosmin Rusu
+
+            */
+        #slideshow2 {
+            width: 550px; /*900*/
+            height: 825px;
+            position: absolute;
+            top: 1090px;
+            left: 50%;
+            right: 50%;
+            margin-left: -275px;
+            margin-right: -275px;
+        }
+
+            #slideshow2 #slidesContainer2 {
+                width: 470px; /* 820 */
+                height: 825px;
+                overflow: auto; /* allow scrollbar */
+                margin: auto;
+            }
+
+                #slideshow2 #slidesContainer2 .slide2 {
+                    margin-left: 0 auto;
+                    width: 450px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+                    height: 825px;
+                }
+
+        .control2 {
+            display: block;
+            width: 39px;
+            height: 420px;
+            text-indent: -10000px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #leftControl2 {
+            top: 0;
+            left: 0;
+            background: transparent url(img/left.png) no-repeat 0 0;
+        }
+
+        #rightControl2 {
+            top: 0;
+            right: 0;
+            background: transparent url(img/right.png) no-repeat 0 0;
+        }
+
+        #pageContainer2 {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        #pageContainer2 h1 {
+            display: block;
+            width: 960px;
+            height: 114px;
+            text-indent: -10000px;
+        }
+
+        .slide2 h2 {
+        }
+
+        .slide2 p {
+            width: auto;
+            height: auto;
+        }
+
+        .slide2 h2 {
+            letter-spacing: -1px;
+        }
+
+        .slide2 .images {
+            z-index: -1;
+        }
+
+        /*Third slideshow (c) Cosmin Rusu*/
+
+        #slideshow3 {
+            width: 900px; /*900*/
+            height: 825px;
+            position: absolute;
+            top: 2180px;
+            left: 50%;
+            right: 50%;
+            margin-left: -450px;
+            margin-right: -450px;
+        }
+
+            #slideshow3 #slidesContainer3 {
+                width: 820px; /* 820 */
+                height: 825px;
+                overflow: auto; /* allow scrollbar */
+                margin: auto;
+            }
+
+                #slideshow3 #slidesContainer3 .slide3 {
+                    padding-top: 10px;
+                    margin-left: 0 auto;
+                    width: 800px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+                    height: 825px;
+                }
+
+        .control3 {
+            display: block;
+            width: 39px;
+            height: 825px;
+            text-indent: -10000px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #leftControl3 {
+            top: 0;
+            left: 0;
+            background: transparent url(img/left.png) no-repeat 0 0;
+        }
+
+        #rightControl3 {
+            top: 0;
+            right: 0;
+            background: transparent url(img/right.png) no-repeat 0 0;
+        }
+
+        #pageContainer3 {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+            #pageContainer3 h1 {
+                display: block;
+                width: 960px;
+                height: 114px;
+                text-indent: -10000px;
+            }
+
+        .slide3 h2 {
+        }
+
+        .slide3 p {
+            width: auto;
+            height: auto;
+        }
+
+        .slide3 h2 {
+            letter-spacing: -1px;
+        }
+
+        .slide3 .images {
+            /*opacity:0.4;
+            filter:alpha(opacity=40);*/
+            z-index: -1;
+        }
+
+        /*Fourth slideshow (c) Cosmin Rusu*/
+
+        #slideshow4 {
+            width: 900px; /*900*/
+            height: 825px;
+            position: absolute;
+            top: 3270px;
+            left: 50%;
+            right: 50%;
+            margin-left: -450px;
+            margin-right: -450px;
+        }
+
+            #slideshow4 #slidesContainer4 {
+                width: 820px; /* 820 */
+                height: 825px;
+                overflow: auto; /* allow scrollbar */
+                margin: auto;
+            }
+
+                #slideshow4 #slidesContainer4 .slide4 {
+                    padding-top: 10px;
+                    margin-left: 0 auto;
+                    width: 800px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+                    height: 825px;
+                }
+
+        .control4 {
+            display: block;
+            width: 39px;
+            height: 825px;
+            text-indent: -10000px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #leftControl4 {
+            top: 0;
+            left: 0;
+            background: transparent url(img/left.png) no-repeat 0 0;
+        }
+
+        #rightControl4 {
+            top: 0;
+            right: 0;
+            background: transparent url(img/right.png) no-repeat 0 0;
+        }
+
+        #pageContainer4 {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        #pageContainer4 h1 {
+            display: block;
+            width: 960px;
+            height: 114px;
+            text-indent: -10000px;
+        }
+
+        .slide4 h2 {
+        }
+
+        .slide4 p {
+            width: auto;
+            height: auto;
+        }
+
+        .slide4 h2 {
+            letter-spacing: -1px;
+        }
+
+        .slide4 .images {
+            /*opacity:0.4;
+            filter:alpha(opacity=40);*/
+            z-index: -1;
+        }
+
+        /*fifth slideshow (c) Cosmin Rusu*/
+
+        #slideshow5 {
+            width: 900px; /*900*/
+            height: 825px;
+            position: absolute;
+            top: 4360px;
+            right:50%;
+            left:50%;
+            margin-left:-450px;
+            margin-right:-450px;
+        }
+
+        #slideshow5 #slidesContainer5 {
+            width: 820px; /* 820 */
+            height: 825px;
+            overflow: auto; /* allow scrollbar */
+            margin: auto;
+        }
+
+        #slideshow5 #slidesContainer5 .slide5 {
+            padding-top: 10px;
+            margin-left: 0 auto;
+            width: 800px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+            height: 825px;
+        }
+
+        .control5 {
+            display: block;
+            width: 39px;
+            height: 825px;
+            text-indent: -10000px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #leftControl5 {
+            top: 0;
+            left: 0;
+            background: transparent url(img/left.png) no-repeat 0 0;
+        }
+
+        #rightControl5 {
+            top: 0;
+            right: 0;
+            background: transparent url(img/right.png) no-repeat 0 0;
+        }
+
+        #pageContainer5 {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        #pageContainer5 h1 {
+            display: block;
+            width: 960px;
+            height: 114px;
+            text-indent: -10000px;
+        }
+
+        .slide5 h2 {
+        }
+
+        .slide5 p {
+            width: auto;
+            height: auto;
+        }
+
+        .slide5 h2 {
+            letter-spacing: -1px;
+        }
+
+        .slide5 .images {
+            z-index: -1;
+        }
+
+
+        /*sixth slideshow (c) Cosmin Rusu*/
+
+        #slideshow6 {
+            width: 1000px; /*900*/
+            height: 1000px;
+            position: absolute;
+            top: 5450px;
+            left: 50%;
+            right: 50%;
+            margin-left: -500px;
+            margin-right: -500px;
+        }
+
+        #slideshow6 #slidesContainer6 {
+            width: 920px; /* 820 */
+            height: 1000px;
+            overflow: auto; /* allow scrollbar */
+            margin: auto;
+        }
+
+        #slideshow6 #slidesContainer6 .slide6 {
+            padding-top: 10px;
+            margin-left: 0 auto;
+            width: 900px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+            height: 1000px;
+        }
+
+        .control6 {
+            display: block;
+            width: 39px;
+            height: 1000px;
+            text-indent: -10000px;
+            position: absolute;
+            cursor: pointer;
+        }
+
+        #leftControl6 {
+            top: 0;
+            left: 0;
+            background: transparent url(img/left.png) no-repeat 0 0;
+        }
+
+        #rightControl6 {
+            top: 0;
+            right: 0;
+            background: transparent url(img/right.png) no-repeat 0 0;
+        }
+
+        #pageContainer6 {
+            margin: 0 auto;
+            width: 960px;
+        }
+
+        #pageContainer6 h1 {
+            display: block;
+            width: 960px;
+            height: 114px;
+            text-indent: -10000px;
+        }
+
+        .slide6 h2 {
+        }
+
+        .slide6 p {
+            width: auto;
+            height: auto;
+        }
+
+        .slide6 h2 {
+            letter-spacing: -1px;
+        }
+
+        .slide6 .images {
+            z-index: -1;
+        }
+    </style>
+    <style type="text/css">
+        .qitem {
+            width: 126px;
+            height: 126px;
+            margin: 10px 5px 5px 0;
+            background: url('bg.gif') no-repeat;
+            /* required to hide the image after resized */
+            overflow: hidden;
+            /* for child absolute position */
+            position: relative;
+            left: 450px;
+            /* display div in line */
+            float: left;
+            cursor: hand;
+            cursor: pointer;
+        }
+
+            .qitem img {
+                border: 0;
+                /* allow javascript moves the img position*/
+                position: absolute;
+                z-index: 200;
+            }
+
+            .qitem .caption {
+                position: absolute;
+                z-index: 0;
+                color: #ccc;
+                display: block;
+            }
+
+                .qitem .caption h4 {
+                    font-size: 12px;
+                    padding: 10px 5px 0 8px;
+                    margin: 0;
+                    color: #369ead;
+                }
+
+                .qitem .caption p {
+                    font-size: 10px;
+                    padding: 3px 5px 0 8px;
+                    margin: 0;
+                }
+        /* Colturile */
+        .topLeft, .topRight, .bottomLeft, .bottomRight {
+            position: absolute;
+            background-repeat: no-repeat;
+            float: left;
+        }
+
+        .topLeft {
+            background-position: top left;
+        }
+
+        .topRight {
+            background-position: top right;
+        }
+
+        .bottomLeft {
+            background-position: bottom left;
+        }
+
+        .bottomRight {
+            background-position: bottom right;
+        }
+
+        .auto-style1 {
+            width: 302px;
+        }
+
+        .auto-style2 {
+            width: 323px;
+        }
+        .auto-style3 {
+            color: #FF9900;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="presentation">
+            <img src="img/logo_2.png" alt="Primul Razboi Mondial" style="position: absolute; left: 100px;" />
+            <div class="qitem">
+                <a class="year1914" href="#year1914">
+                    <img src="img/1914.jpg" alt="Test 1" title="" width="126" height="126" />
+                    <span class="caption">
+                        <h4>Anul 1914 al razboiului</h4>
+                        <p style="text-align: left">Asasinarea lui Franz Ferdinand, mostenitorul imperiului Austro-Ungar, izbucnirea razboiului.</p>
+                    </span>
+                </a>
+            </div>
+            <div class="qitem">
+                <a class="year1915" href="#year1915">
+                    <img src="img/1915.jpg" alt="Test 1" title="" width="126" height="126" />
+                    <span class="caption">
+                        <h4>Anul 1915 al razboiului</h4>
+                        <p style="text-align: left">A fost marcat de intrarea în război a Italiei şi Bulgariei.</p>
+                    </span>
+                </a>
+            </div>
+            <div class="qitem">
+                <a class="year1916" href="#year1916">
+                    <img src="img/1916.jpg" alt="Test 1" title="" width="126" height="126" />
+                    <span class="caption">
+                        <h4>Anul 1916 al razboiului</h4>
+                        <p style="text-align:left">Batalia de la Verdum, batalia de pe raul Somme, ofensiva Rusiei din iunie-septembrie.</p>
+                    </span>
+                </a>
+            </div>
+            <div class="qitem">
+                <a class="year1917" href="#year1917">
+                    <img src="img/1917.jpg" alt="Test 1" title="" width="126" height="126" />
+                    <span class="caption">
+                        <h4>Anul 1917 al razboiului</h4>
+                        <p style="text-align:left">A fost marcat de intrarea in razboi a SUA, China, alaturi de antanta<br />Batalia de la Marasti, Marasesti Oituz.
+                        </p>
+                    </span>
+                </a>
+            </div>
+            <div class="qitem">
+                <a class="year1918" href="#year1918">
+                    <img src="img/1918.jpg" alt="Test 1" title="" width="126" height="126" />
+                    <span class="caption">
+                        <h4>Anul 1918 al razboiului</h4>
+                        <p style="text-align:left">Victoria Antantei, Germania este nevoita sa incheie armistitiul, iar acesta va fi semnat într-un vagon în Pădurea Compiègne pe 11 noiembrie.</p>
+                    </span>
+                </a>
+            </div>
+            <div class="qitem">
+                <a class="year1919" href="#year1919">
+                    <img src="img/1919.jpg" alt="Test 1" title="" width="126" height="126" />
+                    <span class="caption">
+                        <h4>Anul 1919 al razboiului</h4>
+                        <p style="text-align:left">Tratatul de la Versailles <br /> Tratatul de la Brest-Litovs <br /> Tratatul de la Sèvres <br /> Tratatul de pace de la Neuilly sur Seine</p>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div id="sshow">
+            <nav id="primary">
+				<ul style="list-style-type: none;">
+					<li>
+						<h1>Anul 1914</h1>
+						<a class="year1914" href="#year1914">View</a>
+					</li>
+					<li>
+						<h1>Anul 1915</h1>
+						<a class="year1915" href="#year1915">View</a>
+					</li>
+					<li>
+						<h1>Anul 1916</h1>
+						<a class="year1916" href="#year1916">View</a>
+					</li>
+					<li>
+						<h1>Anul 1917</h1>
+						<a class="year1917" href="#year1917">View</a>
+					</li>
+					<li>
+						<h1>Anul 1918</h1>
+						<a class="year1918" href="#year1918">View</a>
+					</li>
+                    <li>
+						<h1>Anul 1919</h1>
+						<a class="year1919" href="#year1919">View</a>
+					</li>
+                    <li>
+						<h1>Romania in primul Razboi Mondial</h1>
+						<a class="romania" href="#romania">View</a>
+					</li>
+                    <li>
+                        <h1>Galerie</h1>
+                        <a class="gallery" href="#gallery">View</a>
+                    </li>
+				</ul>
+			</nav>
+            <div id="flash_container">
+                <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="100%" height="460" id="heeead" style="z-index: -100000000">
+                    <param name="movie" value="heeead.swf" />
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#d6d6d6" />
+                    <param name="play" value="true" />
+                    <param name="loop" value="true" />
+                    <param name="wmode" value="window" />
+                    <param name="scale" value="showall" />
+                    <param name="menu" value="true" />
+                    <param name="devicefont" value="false" />
+                    <param name="salign" value="" />
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="wmode" value="opaque" />
+                    <!--[if !IE]>-->
+                    <object type="application/x-shockwave-flash" data="heeead.swf" width="100%" height="460">
+                        <param name="movie" value="heeead.swf" />
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#d6d6d6" />
+                        <param name="play" value="true" />
+                        <param name="loop" value="true" />
+                        <param name="wmode" value="window" />
+                        <param name="scale" value="showall" />
+                        <param name="menu" value="true" />
+                        <param name="devicefont" value="false" />
+                        <param name="salign" value="" />
+                        <param name="allowScriptAccess" value="sameDomain" />
+                        <param name="wmode" value="opaque" />
+                        <!--<![endif]-->
+                        <a href="http://www.adobe.com/go/getflash">
+                            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+                        </a>
+                        <!--[if !IE]>-->
+                    </object>
+                    <!--<![endif]-->
+                </object>
+            </div>
+        </div>
+        <div id="page">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <img src="img/1915_left.jpg" alt="1915_left" height="600" style="border-width: 0; position: absolute; top: 1716px; left: 0;" />
+        <img src="img/1915_right.jpg" alt="1915_right" height="600" style="position: absolute; top: 1716px; right: 0;" />
+        <img src="map.png" alt="Harta primul razboi mondial" style="position:absolute; top:5070px; z-index: -15; left:50%; right:50%; margin-left:-400px; margin-right:-450px"/>
+        <div id="content">
+            <div id="slideshow">
+                <div id="slidesContainer">
+                    <div class="slide" id="year1914">
+                        <header>
+						    <h1>Pretextul razboiului</h1>
+					    </header>
+                        <span class="images" id="img1">
+                            <img src="img/princip.jpg" alt="Princip Gavrilo" height="280" width="273" style="margin-right: 0; margin-top: 50px; float: right;" />
+                        </span>
+                        <p>
+                            <br />
+                            <strong>Asasinarea lui Franz Ferdinand</strong><br />
+                        </p>
+                        <p style="text-indent: 50px;">
+                            Manevrele armatei austro-ungare se desfășurau în vara lui <b>1914</b> în <strong>Bosnia</strong>. La <strong>28 inunie</strong>, sosi la Sarajevo arhiducele Franz Ferdinand. Moștenitorul tronului austriac, în uniforma 
+                            sa de general, de un albastru deschis, cu chipiul ornant cu pene, strălucea alături de frumoasa 
+                            sa soție, Sofia de Hohenberg, toată în alb. În drum spre primăria orasului, o încercare de atentat 
+                            a eșuat. Nedjolko Cabrinovic, un tipograf de 19 ani, aruncase o bombă împotriva automobilului 
+                            în care călătorea cuplul principar.
+                        </p>
+                        <span class="images">
+                            <img src="img/ferdinand.jpg" alt="Franz Ferdinand" height="280" style="float: left; margin-left: 0; filter: grayscale(100%); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%); -ms-filter: grayscale(100%); -o-filter: grayscale(100%);" />
+                        </span>
+                        <p style="text-indent: 50px;">
+                            Încăpățînt, Franz Ferdinand nu voise să-și amîne 
+                            vizita. După ce dădu ordinele necesare cu privire la măsurile ce se impuneau pentru salvarea vieții unuia 
+                            dintre aghiotanții săi, locotenent-colonelul von Meriazzi, grav rănit ca urmare a atentatului, își continuă drumul 
+                            spre primărie. Ceremonia odată terminată la primarie, Franz Ferdinand se îndreaptă spre spitalul în care fusese internat 
+                            Meriazzi. La o încrucișare de străzi, șoferul, încurcîndu-se, o luă pe un drum greșit. În timp ce dădea mașina înapoi, un tînăr, 
+                            <strong>Gavrilo Princip</strong>, de 19 ani, se repezi și descărcă asupra moștenitorului tronului
+                             Austro-Ungariei si a soției sale mai multe gloanțe. Franz Ferdinand și soția lui fură uciși pe loc.... 
+                            Toți conjurații au fost arestați. Deoarece legea austriacă nu permitea pedeapsa cu moartea pentru minori, cei trei atentatori au fost condamnați la 20 de ani închisoare. 
+                            Ei au murit de tuberculoză înainte de terminarea războiului în închisoarea de tristă celebritate din Theresienstadt din Boemia. Alți trei conjurați avînd peste 20 de ani au fost spînzuarți. 
+                            <br />
+                            <br />
+                        </p>
+                        <nav class="next-prev">
+						    <hr/>
+                            <a class="next year1915" href="#year1915">Next</a>
+					    </nav>
+                    </div>
+
+                    <div class="slide" id="year19141">
+                        <header>
+						    <h1>Care au fost de fapt cauzele?</h1>
+					    </header>
+                        <br />
+                        <div class="images" id="causes_img">
+                            <img src="img/causes_image.jpg" alt="Causes" width="300" style="margin-top: 30px; margin-right: 0; float: right;" />
+                        </div>
+                        <p>
+                            <strong style="font-size: 15px">Goana dupa cuceriri</strong><br />
+                        </p>
+                        <p style="text-indent: 50px;">
+                            La sfârşitul secolului al XIX-lea, când se produce cotitura spre imperialism, “…în sensul dominaţiei depline a trusturilor, în sensul atotputerniciei marilor bănci, cât şi în sensul unei politici coloniale grandioase… ”, începe goana după cuceriri extraeuropene, pentru crearea unor puteri mondiale. Aceasta devine una dintre principalele trăsături definitorii ale poiliticii marilor puteri. Uriaşul avânt al cuceririlor coloniale a atins punctul maxim al intensităţii sale în ultimii douăzeci de ani secolului al XIX-lea. Trecerea capitalismului de la libera concurenţă la stadiul monopolist, la capitalul financiar este aşadar strâns legată de “ascuţirea luptei pentru împărţirea lumii”.
+                        </p>
+                        <p style="text-indent: 50px;">
+                            Aşadar, expansiunea colinială a puterilor imperialiste a creat la sfârşitul secolului al XIX-lea şi începutul veacului al XX-lea, datorită  rivalităţilor inevitabile,o stare latenta de conflict care s-a menţinut permanent, chiar dacă unele diferente au fost rezolvate pe calea tratativelor diplomatice. Rivalităţile coloniale au constituit, în consecinţă, unul dintre cei mai importanţi factori care au contribuit la înrăutăţirea continuă a relaţiilor internationale.
+                        </p>
+                        <p style="text-indent: 50px;">
+                            În ajunul războiului, social-democraţia germană constituia un partid “model”, era o organizaţie de masă, înarmată cu o teorie riguros marxistă, avea un rol conducător în mişcarea socialistă internaţională, dar suferea totuşi de o maladie ale cărei indicii apăruseră deja; oportunism,  “centrism”, revisionism. Ea se va agrava brusc în Germania, ca şi în alte ţări, cu prilejul evenimentelor din vara anului 1914.
+                        </p>
+                        <br />
+                        <br />
+                        <nav class="next-prev">
+						    <hr/>
+                            <a class="next year1915" href="#year1915">Next</a>
+					    </nav>
+                    </div>
+
+                    <div class="slide" id="year19143">
+                        <header><h1>“Campania Surprizelor”</h1></header>
+                        <div class="images" id="Div1">
+                            <img src="img/marna.jpg" alt="Batalia de la Marna" width="300" style="float: right; margin-right: 0; margin-top: 30px;" />
+                        </div>
+                        <br />
+                        <p>
+                            <strong style="font-size: 15px">Batalia de la Marna</strong><br />
+                        </p>
+                        <p style="text-indent: 50px;">
+                            La <strong>5-12 septembrie</strong> a avut loc bătălia de pe Marna - una dintre cele mai mari din istorie. La <strong>5 septembrie</strong> ,unităţile de avangardă germane se aflau la 32 de km de centura Parisului.
+                        </p>
+                        <p style="text-indent: 50px;">
+                            După ce au oprit înaintarea germanilor şi au respins încercarea acestora de a rupe frontul, la <strong>5 septembrie</strong> trupele franceze au declanşat o viguroasă ofensivă. Situaţia strategică le era favorabilă, mai cu seamă datorită faptului că între  armatele a I-a şi a II-a germane s-a creat o breşă largă de 50 km. Sesizând aceasta, în breşă au pătruns corpul expeditionar englez. Retragerea germanilor a devenit astfel inevitabilă <strong>(10-14 septembrie)</strong>. Generalul german, <strong>Moltke</strong>, a fost silit să  ordone retragerea generală de la <strong>Nancy</strong> până la <strong>Vesle</strong>, ceea ce marca sfârşitul bătăliei de pe Marna.
+                        </p>
+                        <p style="text-indent: 50px;">
+                            Frontul s-a stabilizat pe râul <strong>Aisne</strong>. În zilele următoare <strong>(10-15 septembrie)</strong> s-au desfăşurat operaţiuni de mare amploare pe Aisne, fără însă a se obţine o modificare a situaţiei strategice. <strong>Miracolul de pe Marna</strong> care a salvat Parisul şi Franţa, costase scump- <strong>227,000 de francezi morţi, răniţi şi dispăruţi</strong>, plus alti <strong>câtiva mii de englezi morţi şi răniţi</strong>. <strong>Germanii</strong> au pierdut în cursul bătăliei circa <strong>256,000 de soldaţi şi ofiţeri</strong>.
+                        </p>
+                        <p style="text-indent: 50px;">
+                            Bătălia de pe Marna a marcat momentul decisive al campaniei din 1914, a marcat eşecul planului Schlieffen, adică eşecul strategiei germane şi a determinat prelungirea războiului, prevestind victoria Antantei. Ceea ce a urmat a fost pentru Germania şi aliaţii săi un “război al iluziilor”.
+                        </p>
+                        <br />
+                        <br />
+                        <nav class="next-prev">
+						    <hr/>
+                            <a class="next year1915" href="#year1915">Next</a>
+					    </nav>
+                    </div>
+
+                    <div class="slide" id="year19144">
+                        <header><h1>“Campania Surprizelor”</h1></header>
+                        <br />
+                        <p>
+                            <strong style="font-size: 15px">“Cursa spre mare”</strong>
+                        </p>
+                        <p style="text-indent: 50px;">
+                            Ce a însemnat în realitate această serie în lanţ de bătălii este greu de imaginat. Ceea ce îi frapa pe participanţii la “cursa spre mare”, era, potrivit relatărilor generalui Fayolle, că, în fond, “acest război, atât de mare prin numărul combatanţilor, distanţele, mijloacele folosite este mizerabil în execuţia sa.”.
+                        </p>
+                        <p style="text-indent: 50px;">
+                            De asemenea, în Artios, au loc primele lupte specifice unui front pe care se folosesc din plin tranşee, reţeaua de sârmă ghimpată şi cea telefonică. În cursul acestor lupte artileria grea germană s-a arătat a fi sub aşteptări, din cauza  terenului mocirlos, în timp ce tunul francez de 75 mm s –a dovedit extrem de eficient. Pierderile au fost, pe altă parte, teribile, iar unele lupte au fost printre cele mi sângeroase din istoria războiului.
+                        </p>
+                        <div class="images" id="Div3">
+                            <img src="img/transee.jpg" alt="Lupta in transee" width="605" height="412" style="margin: auto; margin-bottom: 15px; margin-top: 15px;" />
+                        </div>
+                        <nav class="next-prev">
+						    <hr/>
+                            <a class="next year1915" href="#year1915">Next</a>
+					    </nav>
+                    </div>
+
+                    <div class="slide" id="year19145">
+                        <br />
+                        <br />
+                        <header><h1>“Campania Surprizelor”</h1></header>
+                        <br />
+                        <p>
+                            <strong style="font-size: 15px">Bătălia de la Tannenberg şi lacurile Mazuriene</strong>
+                        </p>
+                        <br />
+                        <p style="text-indent: 50px">
+                            Armatele a I-a şi a II-a ruse ale frontului de nord-vest comandate de generalii <strong>Rennenkampf şi Samsonov</strong>, au obţinut în faza iniţială a luptelor câteva victorii. Astfel, la <strong>19-20 august</strong> ruşii înfrâng armata germană în bătălia de la Gumbinnen şi Goldap, fără însă a exploata victoria. A urmat însă <strong>dezastrul</strong>: ruşii au pierdut zeci de mii de oameni şi circa 100,000 de prizonieri. Întreaga armată comandată de Samsonov a încetat să mai existe, iar comandantul ei s-a sinucis.
+                        </p>
+                        <br />
+                        <p style="text-indent: 50px">Cei doi generali germani victorioşi la Tannenberg şi-au concentrat imediat forţele împotriva armatei ruse pe care au silit-o, după ce i-a provocat pierderea de a 110,000 oameni, in bătălia de la lacurile Mazuriene <strong>(6-15 septembrie)</strong>, să se retragă pe teritoriul Rusiei.</p>
+                        <br />
+                        <nav class="next-prev">
+						    <hr/>
+                            <a class="next year1915" href="#year1915">Next</a>
+					    </nav>
+                    </div>
+
+                    <div class="slide" id="year191444">
+                        <header><h1>Gazul otravitor</h1></header>
+                        <br />
+                        <p style="text-indent: 100px;">
+                            <strong style="font-size: 15px">Impasul de pe Frontul de Vest și necesitatea de a pune capăt războiului prelungit din tranșee a dus la introducerea gazului toxic în primul război mondial. Germanii, deși faimosi pentru utilizarea de gaze mortale, a ales sa nu-l introducă. Francezii au folosit grenade cu gaze lacrimogene în 1914. Germanii au introdus rapid utilizarea de clor și gaz muștar ca arme.
+                            Cu toate ca soldatii morti din cauza gazului toxic au reprezentat doar patru la suta din numarul total, soldații mutilati de gazare au suferit cele mai mari chinuri.
+                            </strong>
+                        </p>
+                        <div id="cf">
+                            <img src="img/poison_gas_effects.jpg" class="bottom" alt="Poison Gas Effects" width="760" height="365" style="margin: auto; margin-bottom: 15px; margin-top: 15px;" />
+                            <img src="img/poison_gas.jpg" class="top" alt="Poison Gas" width="760" height="450" style="margin: auto; margin-bottom: 15px; margin-top: 15px;" />
+                        </div>
+                        <br />
+                        <br />
+                        <nav class="next-prev">
+						    <hr/>
+                            <a class="next year1915" href="#year1915">Next</a>
+					    </nav>
+                    </div>
+
+                    <div class="slide" id="year19146">
+                        <header><h1>Spaţiul extraeuropean</h1></header>
+                        <br />
+                        <br />
+                        <p style="text-indent: 50px;">
+                            Într-o altă zonă extraeuropeană, în Extremul Orient, la <strong>15 august 1914</strong>, dornică să exploateze încăierarea mariloe puteri imperialiste pe continentul european, pentru a-şi afirma drepturile în faţa  rivalilor şi promova interesele în China şi în Pacific, Japonia a prezentat din proprie iniţiativă un ultimatum Germaniei, iar la <strong>22 august</strong> a declanşat operaţiuni militare împotriva acesteia, pentru a o deposeda de teritoriile chineze asupra cărora se înstăpânise.
+                        </p>
+                        <br />
+                        <p style="text-indent: 50px;">
+                            Concomitent cu evenimentele din China, au loc acţiuni militare în <strong>Pacific</strong>: în colaborare cu australienii, care intraseră în război alături de Anglia, în calitate de dominion britanic, japonezii au ocupat insulele stăpânite de germani. Cu aceasta, participarea Japoniei la operaţiuni militare antigermane propriu-zise s-a încheiat.<br />
+                        </p>
+                        <br />
+                        <br />
+                        <nav class="next-prev">
+						    <hr/>
+                            <a class="next year1915" href="#year1915">Next</a>
+					    </nav>
+                    </div>
+
+                    <div class="slide" id="year19142">
+                        <header><h1>Se astepta un razboi...</h1></header>
+                        <p style="text-align: center;">
+                            <br />
+                            <strong>Jean Jaurès (Discurs în Camera Deputaților, martie 1895)</strong><br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;„Societatea capitalistă poartă în ea războiul așa cum norul liniștit poartă în el furtuna”
+                            <br />
+                            <br />
+                            <strong>Friedrich Engels (Londra, 15 decembrie 1887)</strong><br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;„Milioane de soldați se vor sugruma reciproc, pustiind totodată întreaga Europă, așa cum nu au pustiit-o vreodată nici norii de lăcuste. Devastările pricinuite de Războiul de 30 de ani comprimate într-un interval de 3-4 ani și extinse pe întregul continent; foamete, epidemii, o slăbiciune generală atât a trupelor, cât și a maselor populare, provocată de mizieria neagră, haosul îngrozitor al ingeniosului nostru mecanism al comerțului, industriei și creditului,- toate acestea aducând la un faliment general; prăbușirea vechilor state și a tradiționalei lor înțelepciuni de stat, o asemenea prăbușire încât coroanele se vor rostogoli cu duzinele pe caldarîm fără să se găsească cineva care să le ridice...”
+                            <br />
+                            <br />
+                            <strong>Georges Clémenceau</strong><br />
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;“Fie pace, fie război, sîntem în vîltoarea unei lupte nemiloase pentru dominație. Vai de cei slabi! “
+					        <br />
+                            <br />
+                        </p>
+                        <nav class="next-prev">
+						        <hr/>
+                                <a class="next year1915" href="#year1915">Next</a>
+					        </nav>
+                    </div>
+                </div>
+            </div>
+            <div id="slideshow2">
+                <div id="slidesContainer2">
+                    <article class="slide2" id="year1915">
+					    <header><h1>“Strategia cu scopuri limitate”</h1></header>
+					    <div id="div5" style="text-indent:15px;">
+                            <p>La sfârşitul campaniei din <strong>1914</strong> şi, mai cu seamă, în iarna <strong>1914/1915</strong>, războiul manevrier fusese înlocuit prin războiul de poziţie. Victoria în război nu mai putea fi obţinută decât ca urmare a ruperii frontului inamic, constituit dintr-un vast sistem de tranşee, cazemate, reţele de sârmă ghimpată, câmpuri de mine ş.a. Realizarea rupturii şi depăşirea perioadei de război de poziţie era însă condiţionată de factori de ordin material, politic, de clasă etc. Din această cauză, războiul de poziţie va fi caracteristic pentru mai mulţi ani; încercările făcute până în <strong>1918</strong> de a renunţa la această formă de purtare a războiului au eşuat.</p>
+					        <p><strong>Anul 1915 a fost marcat de intrarea în război a Italiei şi Bulgariei.</strong></p>
+                        </div>
+					    <nav class="next-prev">
+						    <a class="prev year1914" href="#year1914">Prev</a>
+						    <hr />
+						    <a class="next year1916" href="#year1916">Next</a>
+					    </nav>
+				    </article>
+                    <article class="slide2" id="year19151">
+                        <br />
+					    <p style="text-align:left; text-indent:20px"><strong>Anglo-francezii au încercat să aplice, la rândul lor, în cursul anului 1915, aşa-numita strategie periferică. Ei şi-au concentrat o parte din eforturi în sud-estul Europei, având următoarele obiective: </strong></p>
+                        <ul style="list-style-type:disc; text-indent:30px; list-style-position:inside;">
+                            <li>Ocuparea strâmtorilor Bosfor şi Dardanele, precum şi a Constantinopolului;</li>
+                            <li>Atragerea Greciei, Bulgariei şi României în război;</li>
+                            <li>Ajutorarea Serbiei;</li>
+                            <li>Restabilirea legăturilor cu Rusia, prin Marea Mediterană, Marea Egee şi Marea Neagră;</li>
+                            <li>Crearea posibilităţii de a ataca Puterile Centrale prin flancul care părea a fi cel mai vulnerabil. </li>
+                        </ul>
+                        <p style="text-align:left; text-indent:30px;"><strong>Pe de altă parte, începând din 1915, italienii au experimentat loviturile directe, cu preţul a sute de mii de morţi. Numai în prima sa campanie, armata italiană a declanşat patru mari ofensive pe Isonzo, toate soldate cu rezultate mediocre. În ansamblu însă, luptele de pe frontul italian au purtat, ca şi în Vest, amprenta războiului de poziţie. Războiul de pe noul teatru de operaţiuni- cel din sudul continentului, a relevat totodată că “soliditatea Dulei monarhii nu se ridica la înălţimea unui război serios, dus pe două fronturi”.</strong></p>
+                        <nav class="next-prev">
+						    <a class="prev year1914" href="#year1914">Prev</a>
+						    <hr />
+						    <a class="next year1916" href="#year1916">Next</a>
+					    </nav>
+				    </article>
+                    <article class="slide2" id="19152">
+                        <br />
+                        <br />
+					    <p style="text-indent:20px;">
+                            În <strong>1915</strong>, germanii au avut asupra Antantei o superioritate incontestabilă în materialul de război, 
+                            în soldaţi înarmaţi şi instruiţi. Totuşi, înregistrând victoria impresionante pe fronturile din estul şi sud-estul 
+                            Europei, dar nereuşind să elimine Rusia din război şi, prin aceasta, să nu mai fie siliţi să poarte operaţiuni militare 
+                            pe două fronturi, ei nu s-au apropiat câtuşi de puţin de victoria finală, decisive. În cursul acestui an de război s-au putut, 
+                            de asemenea, constata că <strong>“..puternicile grupări ale capitaliştilor din ţările beligerante nu aveau nici un interes ca războiul mondial, 
+                            care abia începuse, să se termine repede,prin operaţii manevriere”</strong>. </p> <p style="text-indent:20px;">Mai mult decât în 1914, în 1915 beligeranţii erau confruntaţi cu 
+                            problemele unui <i>război al tehnicii</i>. Ziarul britanic <i>Daily Telegraph</i> scria la <strong>22 aprilie 1915</strong>, referitor la unul dintre discursurile 
+                            ministrului <strong>Lloyd George: “El a uluit Camera Comunelor anuntând că numai în decurs de două săptămâni ale lunii trecute armata britanică 
+                            a tras mai multe obuze decât în tot războiul cu burii.”.</strong> 
+                        </p>
+                        <br />
+                        <nav class="next-prev"> 
+                            <a class="prev year1914" href="#year1914">Prev</a>
+						    <hr />
+						    <a class="next year1916" href="#year1916">Next</a>
+					    </nav>
+				    </article>
+                    <article class="slide2" id="Article1">
+                        <h1>Grenada</h1>
+					    <p style="text-indent:20px;">
+                             Un număr semnificativ de grenade au fost folosite în tranșeele Primului Război Mondial. Trupele britanice au folosit grenadele Mark I destul de intens. În 1915, trupele britanice au preferat grenada cunoscuta sub numele de "Nr 15. "Aproximativ o jumătate de milion dintre acestea au fost folosite în Primul Război Mondial.
+                        </p>
+                        <p> 
+                             <strong>Mills Grenade</strong> a fost, probabil, cea mai populara grenada utilizata. Introdusa în 1915, ea a fost ulterior îmbunătățită în 1917.
+                            În <strong>1914</strong>, trupele germane au pus peste <strong>70.000</strong> de grenade la dispozitia soldatiilor sai. Germanii au dezvoltat propriile grenade: <strong>Diskushandgranate, Stielhandgranate, Eierhandgranate, și Kugelhandgranate.</strong>
+                        </p>
+                        <p>
+                            Bătălia de Pozieres Heights în <strong>iulie 1916</strong> a fost cea mai mare bătălie grenade de Primul Război Mondial.
+                        </p>
+                        <div id="f1_container">
+                            <div id="f1_card" class="shadow">
+                                <div class="front face">
+                                <img src="img/weapons/mark1grenade.jpg" alt="Mark I Grenade" width="200" height="150"/>
+                                </div>
+                                <div class="back face center">
+                                <p style="color:black;">Grenada MARK I</p>
+                                <p style="color:blue">Au fost folosite in special de trupele britanice.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="f2_container">
+                            <div id="f2_card" class="shadow">
+                                <div class="front face">
+                                <img src="img/weapons/millsgrenade.jpg" alt="Mills Grenade" width="93" height="150"/>
+                                </div>
+                                <div class="back face center">
+                                <p style="color:black;">Grenada MILLS</p>
+                                <p style="color:blue">Cea mai populara!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="f3_container">
+                            <div id="f3_card" class="shadow">
+                                <div class="front face">
+                                <img src="img/weapons/nr15grenade.jpg" alt="Nr.15 Grenade" width="125" height="125"/>
+                                </div>
+                                <div class="back face center">
+                                <p style="color:black;">Grenada NR.15</p>
+                                <p style="color:blue">Adoptata in 1915 de britanici!</p>
+                                </div> 
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <nav class="next-prev"> 
+                            <a class="prev year1914" href="#year1914">Prev</a>
+						    <hr />
+						    <a class="next year1916" href="#year1916">Next</a>
+					    </nav>
+				    </article>
+                </div>
+            </div>
+            <div id="slideshow3">
+                <div id="slidesContainer3">
+                    <article id="year1916" class="slide3">
+				        <header>
+					        <h1>“Strategia Epuizării”</h1>
+				        </header>
+                        <p style="text-indent:50px"><strong>Pentru Campania din 1916 germanii au plănuit schimbarea direcţiei loviturii principale din est pe frontul de vest, cu 
+                            scopul de a obţine decizia în război. Antanta era preocupată de coordonarea acţiunilor ei de pe diverse fronturi în vederea unei o
+                            ffensive simultane. În prima parte a anului 1916, initiative strategică a aparţinut austro-germanilor, dar în iulie 1916 anglo-francezii 
+                            au preluat temporar această iniţiativă.</strong></p><br />
+                        <h4>Obiectivul: VERDUN </h4>
+                        <p style="text-indent:50px;">
+                            Însemnătatea Verdunului în 1916 se datoreşte faptului că el nu a fost o cetate izolată, închisă. Verdunul era cel 
+                            mai puternic sector fortificat al frontului francez al armatelor de câmp, situat pe cursul navigabil al Meusei şi fiind în 
+                            acelaşi timp cel mai mare nod de cale ferată de pe front. Către el convergeau 15 căi ferate şi şosele, atât din spatele frontului 
+                            francez, cât şi a celui german.
+                        </p>
+				        <p>La mijlocul lui februarie 1916 trupele germane se aflau în pregătire. Sectorul ales de ei se afla la nord de Verdun pe un spaţiu de numai 
+                            câţiva kilometri. Primul efort urma să fie susţinut de 6 divizii de infanterie sprijinite de 1000 de tunuri. Pregătirile germane nu scăpaseră
+                             atenţiei francezilor. Generalul Herr semnalase sosirea unor baterii grele germane, construirea de căi ferate înguste necesare aprovizionărilor.
+                             La 11 februarie, serviciul francez de informaţii aflase că germanii vor încerca o mare ofensivă în regiunea Verdun. Situaţia regiunii fortificate
+                             Verdun lăsa mult de dorit. Statul-Major francez nu era însă convins de iminenţa unui atac german de amploare la Verdun, cu atât mai mult cu cât 
+                            atacurile de diversiune duşmane în Champagne si în Artois întăriseră impresia unei offensive germane proiectată în aceste sectoare.</p>
+				        <nav class="next-prev">
+					        <a class="prev year1915" href="#year1915">Prev</a>
+					        <hr />
+					        <a class="next year1917" href="#year1917">Next</a>
+				        </nav>
+			        </article>
+                    <article class="slide3" id="year19161">
+                        <header><h1>“Strategia Epuizării”</h1></header>
+                        <p style="text-indent:50px">Marea bătălie avea să dureze 6 luni, cerând trupelor un effort uriaş,fără precedent, transformând Verdun-ul 
+                            într-un simbol al eroismului, dragostei de patrie şi geniului francez. În acelaşi timp bătălia a dovedit fantasticele posibilităţi de 
+                            energie ale ambelor părţi, sălbatica hotărâre a francezilor de a rezista şi a germanilor de a învinge. Luptele de la Verdun au relevat 
+                            superioritatea iniţiativei personale a francezilor, mobilitatea unităţilor lor, folosirea abilă a terenului, o superioară rezistenţă 
+                            nervoasă. Au fost momente când simpla iniţiativă a comandanţilor de batalioane, companii, a grupelor izolate a decis soarta diverselor
+                             acţiuni, ele fiind parte componentă a efortului general şi a victoriei finale. O vreme, bătălia de la Verdun a trecut drept un “model
+                             al strategiei de epuizare, al strategiei calculului rece şi al măsurii înţelepte”. Apoi a fost considerate ca o supratensiune a strategiei
+                             epuizării. Pentru unităţile care au luptat la Verdun acesta a fost un infern. “Verdun apăsa  ca un coşmar asupra statelor-majore şi asupra 
+                            trupelor…” Fără a o spune explicit, Generalul E. Ludendorff a considerat de fapt această bătălie ca fiind o aventură, deoarece Germania nu 
+                            avea sufficient de mulţi oameni şi destul material pentru ea. 
+                        </p>
+                        <p style="text-indent:50px">
+                            Fără îndoială, bătălia sângeroasă de la Verdun şi-a justificat pe deplin resursele de abator, de  tocătoare a sute de mii de vieţi. Pentru a 
+                            schimba echilibrul creat, diplomaţia ambelor tabere beligerante depunea eforturi pentru a obţine colaborarea unei ţări neutre ca România. Antanta 
+                            îşi făcea calcule evaluând aportul posibil al diverselor state în divizii de infanterie. Puterile Centrale, în condiţiile înăspririi războiului 
+                            economic, îşi făceau socotelile evaluând potenţialul românesc, de pildă, mai cu seamă în tone de cereale, petrol, carne etc.
+                        </p>
+                        <nav class="next-prev">
+					        <a class="prev year1915" href="#year1915">Prev</a>
+					        <hr />
+					        <a class="next year1917" href="#year1917">Next</a>
+				        </nav>
+                    </article>
+                    <article class="slide3" id="year19162">
+                        <header>
+                            <h1>România</h1>
+                        </header>
+                        <p style="text-indent:50px" >
+                            Mult timp România, având la cârma politicii sale o dinastie credincioasă Berlinului şi Vienei, având rezerve faţă de politica Rusiei ţariste, 
+                            a trebuit să se menţină pe linia unei politice progermane, devenită tradiţională. România a trebuit să folosească rivalitatea dintre cele două 
+                            tabere imperialiste, să înceapă  a renunţa la politica progermană, pentru a se orienta către o politică profranceză şi  prorusă- care oferea 
+                            speranţa realizării dezideratului legitim al ţării- desăvârşirea statului naţional unitar. Aşadar, în ajunul izbucinirii războiului mondial, 
+                            politica externă a României începuse să se abată de la tradiţionala sa orientare progermană,  se afla la o răspântie de drumuri, încercând să 
+                            realizeze o concordanţă între interesele, aspiraţiile ţării şi soluţiile diplomatice posibile- oferite de realitatea intenaţională în cursul 
+                            şi în urma crizei balcanice. Evenimentele din anii 1914-1916 vor înlesni şi grăbi acest proces de reorientare a politicii externe româneşti. 
+                            Un prim şi însemnat pas pe această cale a fost întreprins în vara anului 1914 când, izbucnind marea criză mondială, România a hotărât să rămână 
+                            neutră, în ciuda vechilor tratate secrete de alianţă pe care le semnase cu Germania şi Austro-Ungaria. În ultimă instanţă, arăta tovarăşul Nicolae
+                             Ceauşescu, rolul hotărâtor l-a avut „voinţa maselor de a nu intra în război, puternica mişcare internă pentru neutralitate...” care au determinat
+                             menţinerea României în ostilităţilor timp de doi ani.
+                        </p>
+                        <p style="text-indent:50px">
+                            La 10 iulie 1914, regele Carol I, credincios alianţei cu Puterile Centrale, mai ales cu Germania, face cunoscut austro-germanilor că opunându-se 
+                            unui război al României împotriv Imperiului habsburgic, nu se va alătura totuşi acţiunilor acestuia din urmă împotriva Serbiei, chiar dacă acest 
+                            război va atrage după sine intervenţia Rusiei ţariste. Pentru a evita aplicarea tratatului de alianţă cu Tripla Alianţă, Carol I dorea rezolvarea 
+                            paşnică a conflictului austro-sârb. Primul-ministru român I.I.C.Brătianu, urmărea şi el menţinerea păcii cu orice preţ. Nu trebuie neglijat faptul 
+                            că România era cea care presa puterile Antantei pnetru a fi admisă să lupte alături de ele, ci Antanta, inclusiv Rusia, mai ales atunci când 
+                            armatele sale sufereau eşecuri, solicita colaborarea armatei române. 
+                        </p>
+                        <nav class="next-prev">
+					        <a class="prev year1915" href="#year1915">Prev</a>
+					        <hr />
+					        <a class="next year1917" href="#year1917">Next</a>
+				        </nav>
+                    </article>
+                    <article class="slide3" id="year19163">
+                        <header>
+                            <h1>România</h1>
+                        </header>
+                        <h4>Renuntarea la neutralitate</h4>
+                        <p style="text-indent:50px">
+                            După multe tergiversări, la 4/17 august 1916 au fost semnate <a href="PDF/3.pdf" target="_blank">Tratatul de alianţă</a> si <a href="PDF/1.pdf" target="_blank">
+                                Convenţia militară negociate între România şi marile puteri ale Antantei, care asigurau colaborarea militară a României</a>, iar acesteia din urmă 
+                            promisiunea împlinirii aspiraţiilor sale naţionale. Intrarea României în război a fost hotărâtă în dimineaţa zilei de 14/27 august în Consiliul de 
+                            coroană ţinut în palatul Cotroceni. <a href="PDF/2.pdf" target="_blank">La 14/27 august 1916, guvernul român declară război Austro-Ungariei</a>, 
+                            iar la 17/30 august Germania declară război României. România nu a declarat război Bulgariei, deoarece nu avea revendicări în sud şi era interesată 
+                            în amânarea cât mai mult a deschiderii ostilităţilor pe acest front pentru a câştiga timpul necesar sosirii Corpului de ajutor rus. Bulgaria însă, 
+                            observând pasivitatea armatei române pe Dunăre şi în Dobrogea, a declarat război României la 19 august/1 septembrie. La aceeaşi dată declară război şi Turcia.
+                        </p>
+                        <h4>Planul de campanie</h4>
+                        <p style="text-indent:50px">
+                            Planul de campanie român prevedea că scopul general al războiului consta în realizarea idealului naţional, adică întregirea neamului, eliberarea 
+                            teritoriilor locuite de români aflaţi sub dominaţie habsburgică. Scopul strategic al războiului, potrivit planului de campanie, consta în a zdrobi 
+                            definitiv rezistenţa inamicului din Transilvania, a debuşa apoi în câmpia ungară şi pune stăpânire pe văile Tisei şi Dunării. Trupele române, organizate 
+                            în patru grupe, erau prost înarmate: artileria grea lipsea, dotarea cu armament modern era în general deficitară. 
+                            Profitând de şocul provocat de intrarea în război şi de superioritatea lor numerică temporară, trupele române au debuşat în Transilvania(15/28 august), 
+                            au ocupat Braşovul(16/29 august) şi Făgăraşul şi au ajuns în împrejurimile Sibiului.
+                            În octombrie, armata română a zdrobit prima încercare a inamicilor ei de pătrunde prin trcătorile Carpaţilor în Muntenia şi sudul Moldovei. 
+                            Lovindu-se de o rezistenţă neaşteptat de dârză, austro-germanii au fost siliţi să încerce o pătrundere prin vest, executând lovitura principală pe Jiu. 
+                        </p>
+                        <nav class="next-prev">
+					        <a class="prev year1915" href="#year1915">Prev</a>
+					        <hr />
+					        <a class="next year1917" href="#year1917">Next</a>
+				        </nav>
+                    </article>
+                </div>
+
+            </div>
+            <div id="slideshow4">
+                <div id="slidesContainer4">
+                    
+                    <article class="slide4" id="year1917">
+				        <header>
+					        <h1>1917: Anul Marii Crize</h1>
+				        </header>
+                        <br />
+				        <p style="text-indent:50px">Conferinţa interaliată de la Chantillz hotărâse ca puterile Antantei să declanşeze o ofensivă generală la 
+                            începutul anului 1917. Revoluţia rusă din februare, care de mult plutea în aer, va răsturna însă planurile Antantei şi va complica 
+                            extrem de mult situaţia militară şi, fireşte, politică. Cât priveşte Puterile Centrale, analiza capacităţii de luptă a armatelor şi 
+                            a raportului de forţe de pe teatrele de operaţiuni ale războiului, ca şi falimentul strategiei epuizării în 1916 demonstrează 
+                            statelor-majore,în primul rând celui german, că în 1917 acţiunile ofensive pe teatrul de operaţini terestre din vest nu puteau fi decisive
+                            , nu puteau aduce victoria. Dar, pentru ca războiul submarin să aibe timpul necesar să-şi producă efectul dorit, conducătorii militari germani 
+                            au hotărât să-şi silească adeversarii de pe frontul occidental să întârzie cât mai mult declanşarea ofensivei proiectate. Pentru a atinge acest 
+                            obiectiv, germanii s-au resemnat şi au hptărât să execute o retragere, menită să le îmbunătăţească situţia prin creşterea capacităţii de rezistenţă 
+                            a liniilor de apărare,pe poziţii dinainte pregătite(Poziţia Siegfried). Pretuntindeni, în 1917, în spatele fronturilor situaţia economică a devenit 
+                            critică, milioanele de oameni erau copleşiţi de grija procurării zilnice a mijloacelor de trai. Se flămânzea şi chiar se murea din pricina inaniţiei. 
+                            În Franţa producţia diverselor sectoare ale agriculturii a scăzut între 1913 şi 1917 cu 30-50%. În februarie 1917,un decret interzicea vânzarea de pâine 
+                            proaspătă şi impunea amestecarea grâului cu porumb, orz, ovăz şi bob. 
+				        </p>
+                        <h4 style="margin-bottom:5px; margin-top:5px">Criza interna</h4>
+                        <p style="text-indent:50px">
+                            Anul 1917 s-a caracterizat printr-o agravare a crizei interne, a climatului de incertitudine, a depresinii morale, printr-o creştere a avântului 
+                            revoluţionar şi, în consecinţă, prin căutarea febrilă de către clasele guvernante a unor soluţii politice care să le permită dominarea situaţiei, 
+                            înăbuşirea nemulţumiţilor şi continuarea războiului. În Franţa, din Sfânta Unire  nu mai rămăsese decât numele. 
+                            Marea Britanie- singura mare ţară beligerantă din Europa care în 1917 a beneficiat de o stabilitate guvernamentală, era condusă încă de la 
+                            sfârşitul anului 1916 deun cabinet Lloyd George, acre instaurase un regim autoritar. În 1917, o dificultate fundamentală a politicii interne 
+                            engleze era creată de problema recrutării, a limitării numărului exceptătorilor. 
+
+				        </p>
+                        <nav class="next-prev">
+					        <a class="prev year1916" href="#year1916">Prev</a>
+					        <hr />
+                            <a class="next year1918" href="#year1918">Next</a>
+				        </nav>
+			        </article>
+                    <article class="slide4" id="year191717">
+                        <header>
+					        <h1>Intrarea În Război a SUA</h1>
+				        </header>
+                        <h4>Din cauza politicii tradiționale americane de izolare, mulți americani considerau că SUA nu trebuie să se implice în Primul 
+                            Război Mondial, care era considerat un război european.</h4>
+                        <br />
+                        <p style="text-indent:50px">
+                            
+                            La începutul anului 1917, Germania a declanșat războiul submarin total. Acest fapt, combinat cu indignarea publicului 
+                            american care aflase de Telegrama Zimmermann, a dus la ruperea completă a relațiilor SUA cu Puterile Centrale 
+                            (3 februarie 1917). Datorită continuării atacurilor asupra navelor comerciale americane, Președintele, Woodrow Wilson, 
+                            a cerut Congresului, la 6 aprilie 1917, să declare război Germaniei. Ambele camere ale Congresului au votat legea cu o 
+                            largă majoritate. Wilson a sperat că va putea negocia o pace separată cu Austro-Ungaria, dar descoperind că acest lucru 
+                            nu era posibil, SUA a declarat război și Austro-Ungariei, în 7 decembrie 1917.
+                        </p>
+                        <p style="text-indent:50px">
+                            Înainte de intrarea lor oficială în război, Statele Unite au reușit să dezvolte o producție militară suficientă 
+                            și completă și, totodată, au acordat Antantei împrumuturi substanțiale. Primii soldați americani au sosit în Europa, 
+                            în 1917, însă contingente majore nu au sosit până în vara anului 1918. Germania conta pe faptul că ofensiva submarină 
+                            va încetini flota americană și transferul soldaților, sperând că va reuși să câștige războiul înainte ca forțele americane 
+                            să ajungă pe front.
+                        </p>
+                        <p style="text-indent:50px">
+                            Marea Britanie și Franța au cerut Statelor Unite să trimită infanterie pe linia frontului, pentru a întări pozițiile 
+                                existente. Pe întregul parcurs al războiului forțele americane nu au avut destule unități proprii de artilerie, 
+                                aviație și geniu. Generalul John J. Pershing, comandantul forței americane American Expeditionary Force, a refuzat 
+                                să fragmenteze unitățile americane pentru a întări forțele britanice sau franceze, așa cum doreau Aliații. Pershing a 
+                                utilizat atacuri directe, o strategie care deja fusese întreruptă de către comandanții francezi și britanici. 
+                                Ca rezultat, American Expeditionary Force a suferit un număr foarte ridicat de pierderi în toamna anului 1918..
+
+                        </p>
+                        <nav class="next-prev">
+					        <a class="prev year1916" href="#year1916">Prev</a>
+					        <hr />
+                            <a class="next year1918" href="#year1918">Next</a>
+				        </nav>
+                    </article>
+                    <article class="slide4" id="Article2">
+                        <header>
+					        <h1>Revouluția Bolșevică</h1>
+				        </header>
+                        <p style="text-indent:50px">
+                            Ca o consecinţă firească a agravării crizei interne din ţările beligerante, a prelungirii războiului imperialist, 
+                            mişcarea revoluţionară a descris o curbă ascendentă a cărui apogeu a fost atins într-o parte însemnată a lumii în anul 
+                            1917. Începutulanului adusese o profundă zguduire revoluţionară a Rusieiale cărei ecouri au fost resimţite pe toate 
+                            meridianele globului, iar din punct de vedere militar a zdruncinat sistemul ofensiv-defensiv al Antantei. 
+                            Ascuţirea la maximum a contradicţiilor social-economice şi politice din vechea Rusie în condiţiile războiului 
+                            imperialist creat situaţia revoluţionară pe care bolşevicii conduşi de V. I. Lenin au ştiut să o folosească în favoarea 
+                            clasei lor, a proletariatului şi a maselor largi populare.
+                        </p>
+                        <p style="text-indent:50px">
+                            Insatisfacția pentru modul în care guvernul rus conducea războiul a crescut, în ciuda succeselor obținute de generalul 
+                            Brusilov în cadrul Ofensivei Brusilov (iunie 1916), în Galiția de Est contra austriecilor. Situația Aliaților s-a îmbunătățit 
+                            puțin doar în momentul când România a intrat în război, la 27 august, însă foarte repede contingente germane au întărit 
+                            forțele austro-ungare în Ardeal, și Bucureștiul a fost capturat de către Puterile Centrale (6 decembrie 1916). În această 
+                            perioadă, situația internă în Imperiul Rus devenise instabilă, deoarece țarul era plecat pe front și conducerea incompetentă 
+                            a Împărătesei Alexandra cauza proteste din toate colțurile Rusiei, care au provocat asasinarea de către un grup de 
+                            aristocrați conservatori a lui Rasputin, un preferat al împărătesei, în decembrie 1916.
+                            În martie 1917, demonstrațiile din Sankt Peterburg au culminat cu abdicarea țarului Nicolae al II-lea al Rusiei și 
+                            constituirea unui guvern centrist provizoriu, condus de Kerenski, care împărțea puterea cu Sovietul din Petrograd. 
+                            Această diviziune a puterilor a condus la o stare de confuzie și haos, pe front și în țară, iar armata a devenit din 
+                            ce în ce mai puțin eficientă.
+                        </p>
+                    </article>
+                    <article>
+                        <header>
+					        <h1>Revouluția Bolșevică</h1>
+				        </header>
+                        <p style="text-indent:50px">
+                            Războiul și guvernul pierdeau continuu susținerea poporului, un fapt care a permis ascensiunea Partidului Bolșevic, 
+                            condus de Vladimir Ilici Lenin. Revoluția Bolșvică din Octombrie (7 noiembrie st.n.) a fost urmată, în decembrie, 
+                            de un armistițiu și negocieri cu Germania. La început, bolșevicii au refuzat termenii duri de capitulare propuși de 
+                            germani, însă când Germania a reînceput războiul și a înaintat rapid prin Ucraina, noul guvern a fost nevoit să accepte 
+                            Tratatul de la Brest-Litovsk (3 martie 1918), care a însemnat terminarea participării Rusiei la război și cedarea către 
+                            Puterile Centrale a unor teritorii întinse, care au inclus Finlanda, Statele Baltice, Polonia și Ucraina.
+                            După ieșirea Rusiei din război, puterile Antantei au organizat o invazie limitată a Rusiei. Scopul mișcării nu a fost 
+                            să pedepsească Rusia pentru ieșirea ei din război, ci să susțină forțele țariste în Revoluția Rusă. Soldați aliați au 
+                            sosit în Arhanghelsk și în Vladivostok. Forțele Antantei aveau ordine să apere proviziile și armamentul contra soldaților 
+                            germani; în realitate, acestea le apărau contra comuniștilor ruși.
+                        </p>
+                        <p style="text-indent:50px">
+                            În 1917,anul unor bătălii sângeroase, nedecise, inutile, al unor momente critice pentru toţi beligeranţii, 
+                            al celor două revoluţii ruse, al creşterii impetuoase a valului revolutionar, al oboselii generale, idea păcii agita 
+                            din ce în ce mai mult opinia publică. Ea a fost luată în discuţie în mod serios de către cercurile guvernante din 
+                            diverse ţăr, iar socialiştii au anunţat public intenţia lor de a discuta problema păcii în cadrul unei conferinţe 
+                            international la Stockholm. Sovieticul din Petrograd şi, în general, revoluţionarii ruşi s-au pronunţat pentru o pace 
+                            fără anexiuni.
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <div id="slideshow5">
+                <div id="slidesContainer5">
+                     <article class="slide5" id="year1918">
+				        <header>
+					        <h1>Victoria militară a Antantei</h1>
+				        </header>
+				        <p style="text-indent:50px">
+                                La începutul anului 1918, germanii şi aliaţii lor aveau speranţe şi iluzii în ceea ce priveşte obţinerea  victoriei 
+                            militare decisive. Antanta avea însă şanse şi certitudini. Ea credea în victorie, avea siguranţ că o va obţine în 1918 sau, cel târziu, în 1919, 
+                            datorită intrării în luptă a Statelor Unite. Nădejdile în victorie ale germanilor se bizuiau pe modificările suferite de raportul de forţe 
+                            militare dintre cele două tabere. La 1 martie, între Rusia Sovietică şi Puterile Centrale au reînceput tratativele de pace, care s-au încheiat 
+                            prin semnatea tratatului de pace de la Brest-Litovsk. Data reală a reintrării României în război este 4 noiembrie. La 8 noiembrie, în momentul 
+                            în care aliaţii atinseseră deja Dunărea şi apoi treceau fluviul sub comanda generalului francez H.M.Berthelot, fostul şef al misiunii militare în 
+                            România, România participa în mod efectiv la război.
+				        </p>
+                         <p style="text-indent:50px">
+                             Încheierea armistiţiului dintre guvernul sovietic şi austro-germani, tratativele de pace de la Brest-Litovsk şi lipsa unui sprijin militar efectiv 
+                             din partea aliaţilor occidentali făceau imposibilă şi inutilă continuarea de către România a luptei împotriva Puterilor Centrale. Guvernul român a 
+                             analizat cu realism situaţia ţării şi, în ciuda dorinţelor aliaţilor săi- pe care nu-i interesa decât ca soldaţii români să continue a susţine un front 
+                             în sud-estul Europei sau chiar în sudul Rusiei-, a început la sfârşitul lui noiembrie 1917 tratativele de armistiţiu. La 5 martie 1918, România semna 
+                             prin reprezentanţii săi preliminariile păcii de la Buftea impuse de austro-germani, iar la 7 mai, pacea de la Bucureşti. 
+                         </p>
+				        <nav class="next-prev">
+					        <a class="prev year1917" href="#year1917">Prev</a>
+					        <hr />
+                            <a class="next year1919" href="#year1919">Next</a>
+                        </nav>
+                    </article>
+                    <article class="slides5">
+                        <p style=" text-indent:50px">
+                            In conditiile refuzului Germaniei de a incheia o pace fara anexiuni, Rusia Sovietica a semnat, in interesul salvarii Revolutiei, tratatul de pace 
+                            de la Brest-Litovsk. In vara anului 1918, fortele democratice contrarevolutionare, sprijinite de Occident incep ofensiva impotriva puterii comuniste 
+                            din Rusia. In 1918, armatele Antantei trec la ofensiva pe toate fronturile. In Balcani, ele inainteaza rapid spre Dunare; Bulgaria, in care izbucnise
+                             o rascoala republicana, capituleaza in septembrie. In Austro-Ungaria au loc miscari revolutionare de eliberare nationala si pentru transformari 
+                            sociale burghezo-democratice ale cehilor, slovacilor, sarbilor, croatilor, romanilor
+                            Generalul german Ludendorff a dezvoltat planurile pentru operațiunea numită Michael ca o ofensivă generală de-a lungul Frontului de Vest. Această 
+                            Ofensivă de primăvară (Kaiserschlacht) avea scopul să despartă forțele britanice și franceze printr-o serie de avansări. Comandamentul german spera 
+                            să lanseze un atac hotărâtor înainte ca forțele americane să fie gata pentru luptă în Europa. Înainte de începutul ofensivei, Ludendorff a făcut o 
+                            greșeală crucială, lăsând partea principală a Armatei a VIII-a germane în Rusia și mutând doar o parte mică a forțelor germane pe Frontul de Vest.
+                        </p>
+                    </article> 
+                    <article class="slides5">
+                        <p style=" text-indent:50px">
+                            Bulgaria a fost prima din Puterile Centrale care a semnat un armistițiu separat la data de (29 septembrie 1918). La 30 octombrie a capitulat și 
+                            Imperiul Otoman. În 3 noiembrie Austro-Ungaria a trimis un steag alb comandantului italian pentru a-i cere un armistițiu și termenii păcii. Termenii 
+                            au fost aranjați, prin telegraf, cu autoritățile Antantei de la Paris și au fost comunicați Austro-Ungariei, iar aceasta i-a acceptat. Armistițiul 
+                            cu Austria a intrat în vigoare începând cu ora 3, în după amiaza zilei de 4 noiembrie. Austria și Ungaria au semnat armistiții separate, în urma 
+                            prăbușirii monarhiei habsburgice. După izbucnirea Revoluției germane, a fost proclamată o republică, la 9 noiembrie, marcând sfârșitul Imperiului 
+                            German. Kaiserul s-a refugiat a doua zi în Olanda, care i-a acordat azil politic (a se vedea Republica de la Weimar). O zi mai târziu (11 noiembrie),
+                             la Compiègne, în Franța, la ora 05.00, într-un vagon de tren a fost semnat armistițiul. La ora 11, în aceeași zi, a încetat focul și armatele au 
+                            început să se retragă. Datorită ordinelor confuze și a încercărilor criminale ale unor ofițeri de a se evidenția în ultimul moment, peste cadavrele 
+                            bieților soldați, în aceste șase teribile ore, după ce totul fusese încheiat și semnat la masa tratativelor, au murit inutil aproape 3 000 de soldați 
+                            și au fost răniți alte peste 6 000. George Lawrence Price este considerat, ca fiind ultimul soldat ucis, cu un glonte german în frunte, la ora 10.59.
+                        </p>
+                    </article>       
+                </div>
+            </div>
+            <div id="slideshow6">
+                <div id="slidesContainer6">
+                    <article class="slide6" id="year1919">
+				        <header>
+					        <h1>Conferinta de Pace de la Paris</h1>
+				        </header>
+                        <h4>Conferința de Pace de la Paris a început la 18 ianuarie 1919, având drept obiectiv dezbaterea noii configurații politico-teritoriale și rezolvarea complicatelor probleme economico-financiare rezultate din Primul Război Mondial. Au participat 27 de state, printre care și România. Conferința avea ca scop elaborarea și semnarea tratatelor de pace între statele învingătoare (cu excepția Rusiei, atunci în plin război civil) și cele învinse în Primul Război Mondial. Președintele Conferinței a fost proclamat delegatul Franței, țară gazdă : Georges Clemenceau.</h4>
+				        <h4 style="text-align:left;">Cei patru mari</h4><img src="img/paris.jpg" alt="Cei patru mari" id="paris" style="margin:auto;"/>
+                        <p style="text-indent:50px;">
+                            Tratatul de la Versailles din 1919 este un tratat de pace creat ca rezultat al negocierilor de 6 luni purtate la Conferinţa de Pace de la Paris din 
+                            1919, ce a dus la încheierea oficială a Primului Război Mondial între forţele Aliaţilor (Franţa, Anglia, SUA, Italia, Japonia, Polonia, România, 
+                            Serbia, Cehoslovacia) şi cele ale Puterilor Centrale (Germania, Austro-Ungaria, Imperiul Otoman, Bulgaria). Tratatul este urmarea armistiţiului 
+                            semnat la 11 noiembrie 1918, în pădurea din Compiègne, ce a pus punct luptelor. Tratatul stipula ca Germania să-şi asume completa responsabilitate 
+                            pentru declanşarea războiului şi să plătească mari compensaţii (reparaţii de război) trupelor aliate. Germania pierdea, de asemenea, teritorii în 
+                            favoarea ţărilor vecine, suferea o severă limitare a forţelor militare şi a fost deposedată de coloniile sale africane şi cele de dincolo de ocean. 
+                            Reprezentanţii noului Guvern german (Republica de la Weimar) au fost obligaţi de către învingători să semneze acest tratat, altfel luptele aveau să 
+                            înceapă iarăşi. Ministrul de Externe al Germaniei, Hermann Müller, a semnat Tratatul la 28 iunie 1919. Tratatul a fost ratificat de către Liga 
+                            Naţiunilor la 10 ianuarie 1920. În Germania, tratatul a cauzat un şoc, resimţit, deseori, ca o traumă sau un complex anti-Versailles, care, 
+                            eventual, a contribuit la colapsul Republicii de la Weimar, în 1933, şi la accederea lui Adolf Hitler la putere. </p>
+                        
+                        <p style="text-indent:50px;">
+                            La 18 Ianuarie 1919 la initiative puterilor invingatoare in razboi – lucrarile Conferintei de la Paris , al carei scop  era pregatirea 
+                            tratatelor de pace si crearea unui nou system de relatii intereuropene , cunoscut ulterior ca Sistemul de la Versailles . Aceasta 
+                            denumire a fost data pentru ca tratatul cu principalul stat invins (Germania ) a fost semnat aici la 28 iunie 1919 . Depasind totodata 
+                            cadrul strict continental , puterile invingatoare propuneau un nou mod de abordare al diplomatiei  , prin construirea Societatii Natiunilor 
+                            organizate supra statal menita sa asigure pacea si securitatea in lume .
+                        </p>
+                        <nav class="next-prev">
+					        <a class="prev year1918" href="#year1918">Prev</a>
+					        <hr />
+                            <a class="next romania" href="#romania">Next</a>
+                        </nav>
+                    </article>
+                    <article class="slide6" id="19191">
+                        <header>
+					        <h1>Tratatul de pace cu Germania Versailles 1919</h1>
+				        </header>
+                            <h4>Introducere</h4>
+                            <p style="text-indent:50px">Tratatul de pace de la Versailles a fost semnat între Germania şi Aliaţi la sfărşitul Primului Război Mondial. A fost negociat în timpul Conferinţei de Pace de la Paris care a avut loc la Versailles începând cu 18 ianuarie 1919. Au fost prezenţi reprezentanţi ai SUA, Anglia, Franţa şi Italia; Republica Germană, care înlocuise vechea formă de guvernământ la sfârşitul războiului, a fost exclusă de la negocieri. În prima parte a tratatului a fost inclusă Liga Naţiunilor, prima organizaţie de pace mondială. 
+</p><p style="text-indent:50px">Tratatul a fost semnat pe 28 iunie 1919 în Sala Oglinzilor din Palatul Versailles de lângă Paris. SUA nu a ratificat tratatul, dar a semnat separat cu Germania Tratatul de la Berlin la 2 iulie 1921. 
+                        </p>
+<h4>Refacerea şi reparaţiile</h4>
+                            <p style="text-indent:50px">
+                            Prin tratatul de la Versailles, Germania a fost obligată:</p>
+                            <ul style=" text-indent:60px;list-style-type:none">
+                            <li>•	să renunţe la serviciul militar obligatoriu;</li>
+                            <li>•	să-şi reducă armata la 100000 de oameni; </li>
+                            <li>•	să demilitarizeze toate teritoriile din stânga Rinului şi de asemenea 50 kilometri în dreapta Rinului;</li>
+                            <li>•	să oprească toate importurile, exporturile şi aproape toată producţia de armament; </li>
+                            <li>•	să-şi limiteze flota la 24 de nave, fără submarine, personalul naval să nu depăşească 15000 de oameni; </li>
+                            <li>•	să abandoneze toată aviaţia militară şi navală până la 1 octombrie 1919.</li>
+                            <li>•	William II trebuia judecat pentru crime de război de către un tribunal internaţional, dar procesul nu a avut loc   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  niciodată.</li>
+                            </ul>
+                            <h4>    Pentru pagubele provocate în timpul războiului de Aliaţi, Germaniei i s-a cerut să facă reparaţii financiare extinse. Pe lângă bani, plata a fost facută şi sub forma de nave maritime, trenuri, animale şi resurse naturale. 
+                            </h4>
+                        <nav class="next-prev">
+					        <a class="prev year1918" href="#year1918">Prev</a>
+					        <hr />
+                            <a class="next romania" href="#romania">Next</a>
+                        </nav>
+                    </article>
+                    <article class="slide6" id="Article3">
+                        <header>
+                            <h1>Tratatul de pace cu Germania Versailles 1919</h1>
+                        </header>
+                        <h3>Partea X. Secţiunea II – Tratate</h3>
+                        <p style="text-indent:50px">
+                            Art. 292. Germania recunoaşte ca fiind şi rămânând abrogate toate tratatele, convenţiile şi înţelegerile pe care le-a 
+                            încheiat cu Rusia sau cu orice stat sau guvern al cărui teritoriu constituia mai înainte o parte a Rusiei, cât şi cu 
+                            România, înainte de 1 august 1914, sau de la această dată, până la punerea în vigoare a Tratatului de faţă. […]
+                        </p>
+                        <h3>Secţiunea IV - Bunuri, drepturi şi interese</h3> 
+                        <p style="text-indent:50px"> 
+                            Art. 297. […] Sub rezerva dispoziţiunilor contrarii care ar putea să rezulte din prezentul Tratat, Puterile aliate 
+                            şi asociate îşi rezervă dreptul de a reţine şi de a lichida toate bunurile, drepturile şi interesele aparţinând, 
+                            la data punerii în vigoare a prezentului Tratat, supuşilor (ressortissants) germani sau unor societăţi controlate 
+                            de ei pe teritoriul lor, în coloniile, posesiunile şi ţările lor de protectorat, inclusiv în teritoriile care le-au 
+                            fost cedate în virtutea prezentului Tratat.
+                            Lichidarea va avea loc conform legilor statului aliat sau asociat interesat, iar proprietarul german nu va putea să 
+                            dispună de aceste bunuri, drepturi şi interese, nici să le greveze cu vreo sarcină, fără consimţământul acestui stat.
+                            Nu vor fi consideraţi, în spiritul prezentului paragraf, ca supuşi (ressortissants) germani, supuşii (ressortissants) 
+                            germani care dobândesc de plin drept naţionalitatea unei Puteri aliate sau asociate, prin aplicarea prezentului Tratat. […]
+                        </p>
+                        <h3>Partea XV - Clauze diverse</h3>
+                        <p style="text-indent:50px">
+                            Art. 434. Germania se obligă să recunoască completa valoare a Tratatului de pace şi a Convenţiunilor adiţionale care vor fi 
+                            încheiate de Puterile aliate şi asociate cu Puterile care au luptat alături de Germania, să accepte dispoziţiunile ce vor 
+                            fi luate cu privire la teritoriile fostei Monarhii a Austro-Ungariei, ale Regatului Bulgariei şi ale Imperiului otoman şi 
+                            să recunoască noile state înăuntrul fruntariilor ce le sunt astfel fixate. […]
+                        </p>
+                        <h5 style="text-allign:right">“Monitorul oficial”, din 9 aprilie 1920</h5>
+                        <nav class="next-prev">
+					        <a class="prev year1918" href="#year1918">Prev</a>
+					        <hr />
+                            <a class="next romania" href="#romania">Next</a>
+                        </nav>
+                    </article>                    
+                    <article class="slide6" id="191919">
+                        <header>
+                            <h1>Condiţii</h1>
+                        </header>
+                        <p style="text-indent:50px">
+                            Tratatul prevedea crearea Ligii Naţiunilor, un ţel important pentru preşedintele american Woodrow Wilson. Liga Naţiunilor urma să arbitreze conflictele dintre naţiuni înainte ca ele să fi ajuns la război. Nu toate <a href="PDF/4.pdf" target="_blank">cele "14 puncte" ale preşedintelui Wilson au fost realizate</a>, spre exasperarea atât a germanilor, cât şi a lui Wilson. Cu alte cuvinte, principiul naţionalităţilor s-a aplicat inconsecvent, doar atunci când convenea aliaţilor victorioşi. În cazul unor teritorii locuite în majoritate de populaţie germană s-a aplicat principiul istoric, nu cel naţional. Satisfacerea revendicărilor din partea Franţei a fost obiectivul principal în acest tratat. Alte prevederi includeau cedarea unor colonii aflate sub dominaţie germană şi pierderea unor teritorii anexate sau cucerite de către Germania anterior:
+                        </p>
+                        <ul style=" list-style-position: inside; text-indent:100px; list-style-type:square">
+                            <li>Alsacia-Lorena (aparţinând Franţei, din secolul XVII până în 1871), prin politica expansionistă a lui Ludovic al XIV-lea, a fost redată Franţei (14.522 km2, 1.815.000 locuitori, (în 1905));</li>
+                            <li>Nordul Schleswigului, zona Tonder în Schleswig-Holstein, după Plebiscitul Schleswig, a fost redat Danemarcei (3.228 km2 sau 3.938km2);</li>
+                            <li>majoritatea teritoriului din Marea Poloniei ("Provinz Posen") şi estul regiunii Pomerania (Prusia de Vest), pe care Prusia il cucerise în Glasvandul Poloniei, au fost redate Poloniei dupa Marea Rascoală Poloneză (53.800 km2 cu 4.224.000 locuitori (in 1931), inclusiv 510 km2 si 26.000 locuitori din Silezia Superioară);</li>
+                            <li>zona Hulczyn din Silezia Superioara, a fost acordată Cehoslovaciei (316 sau 333 km2 si 49.000 locuitori);</li>
+                            <li>Estul Sileziei Superioare, după plebiscit, a fost redat Poloniei (3.214 km2 cu 965.000 locuitori);</li>
+                            <li>zona oraşelor germane Eupen şi Malmedy a fost acordată Belgiei;</li>
+                            <li>zona Soldau din Prusia de Est, incluzând (calea ferată pe ruta Varsovia-Gdansk) a fost acordată Poloniei (492 km2).</li>
+                        </ul>
+                        <h4 style="text-indent:50px">Inconsecvenţa aplicării principiilor de drept, respectiv recurgerea la argumentul naţional doar în detrimentul Germaniei, nu şi în cazul teritoriilor cu majoritate germană aflate în dispută, a dus la frustrările care au constituit samânţa celui de-al Doilea Război Mondial.</h4>
+                        <nav class="next-prev">
+					        <a class="prev year1918" href="#year1918">Prev</a>
+					        <hr />
+                            <a class="next romania" href="#romania">Next</a>
+                        </nav>
+                    </article>
+
+                    <article class="slide6" id="Article6">
+                        <header>
+                            <h1>Tratatul de pace cu Austria</h1>
+                        </header>
+                        <h4>Saint-Germain,10 septembrie 1919</h4>
+                        <p id="germaine_treat" style="text-indent:50px">
+                            Tratatul de pace cu Austria ( Saint-Germain , pe 10 septembrie 1919 ) recunoastea unirea Bucovinei cu Romania . Totusi clauzele economice erau 
+                            superficial tratate , iar in plus , sub pretextul apararii minoritatilor nationale , marile puteri isi creau posibilitatea de a intervene in 
+                            problemele interne ale Romaniei . Nereusind sa impuna reformularea acestor prevederi I.C. Bratianu a parasit conferinta si apoi si-a dat demisia 
+                            din functia de prim-ministru . Noul guvern , condus condus de Al.Vaida-Voevod a semnat tratatul abia dupa 3 luni , dupa ce a obtinut unele 
+                            reformulari in ceea ce priveste tratatul minoritatilor .
+                        </p>
+                        <img style="margin:auto;" src="saint-germain.jpg" alt="Tratatul de la Saint Germain" id="saintgermain"/>
+                        <h4>Partea III - Clauze politice europene</h4>
+                        <h4>Secţiunea VIII - România</h4>
+                        <p style="text-indent:50px"> 
+                            Art. 59. Austria renunţă, în ceea ce o priveşte, în favoarea României, la toate drepturile şi titlurile asupra părţii fostului ducat al Bucovinei cuprinsă dincoace de fruntariile României, astfel precum vor fi fixate ulterior de principalele puteri aliate şi asociate.
+                            Art. 60. România consimte la inserţiunea într-un tratat cu principalele puteri aliate şi asociate a unor dispoziţiuni pe care aceste puteri le vor socoti necesare pentru a ocroti în România interesele locuitorilor ce se deosebesc prin rasă, limbă sau religiune de majoritatea populaţiunii.
+                            România consimte, de asemenea, la inserţiunea într-un tratat cu principalele Puteri aliate şi asociate, a unor dispoziţiuni pe care aceste puteri le vor socoti necesare pentru a ocroti libertatea tranzitului şi a aplica un regim echitabil comerţului celorlalte naţiuni.
+                            Art. 61. Proporţia şi natura sarcinilor financiare ale fostului Imperiu al Austriei pe care România va avea să le ia pe seamă pentru teritoriul pus sub suveranitatea ei vor fi stabilite conform cu art. 203, partea IX (Clauze financiare) a tratatului de faţă.
+                            Convenţiuni ulterioare vor regula toate chestiunile care n-ar fi regulate prin tratatul de faţă şi care ar putea lua naştere din cesiunea zisului teritoriu.
+                        </p>
+                        <p style="text-align:right">
+                             “Monitorul oficial”, din 26 septembrie 1920
+                        </p>
+                        <nav class="next-prev">
+					        <a class="prev year1918" href="#year1918">Prev</a>
+					        <hr />
+                            <a class="next romania" href="#romania">Next</a>
+                        </nav>
+                    </article>
+                    <article class="slide6" id="Article7">
+                        <header><h1>Tratatul de pace cu Ungaria</h1></header>
+                        <h4>Trianon, 4 iunie 1920</h4>
+                        <p style="text-indent:50px">
+                            Tratatul de la Trianon a fost semnat la data de 4 iunie 1920 între Puterile Aliate învingătoare în primul război mondial şi Ungaria, în calitate de stat succesor al Imperiului Austro-Ungar, stat învins în primul război mondial. Tratatul a fost semnat în Palatul Marele Trianon de la Versailles de către 16 state aliate (inclusiv România) pe de o parte şi de Ungaria de alta parte. Tratatul este divizat în patru părţi. Prima parte include Pactul Ligii Naţiunilor (parte comună pentru toate tratatele de pace încheiate după primul război mondial). Partea a doua (articolele 27-35) defineşte frontierele Ungariei cu statele vecine. În principiu, acestea sunt actualele frontiere ale Ungariei. Frontiera romano-ungara este descrisă în secţiunea a doua a articolului 27 (traseul actualei frontiere între România şi Ungaria).
+                        </p>
+                         <p style="text-indent:50px">
+                        Partea a treia (articolele 36-78) intitulată "Clauze politice pentru Europa", conţinea o serie de clauze privind, pe de o parte cadrul bilateral al relaţiilor dintre Ungaria şi statele vecine, recunoaşterea unor clauze politice privind anumite state din Europa (Belgia, Luxemburg etc.), dispoziţii referitoare la cetăţenie, protecţia minorităţilor naţionale. Partea a patra (articolele 79-101), intitulată "Interesele Ungariei in afara Europei" conţinea prevederi referitoare la renunţarea de către Ungaria la tratatele încheiate de către Dubla Monarhie cu Maroc, Egipt, Siam (Thailanda de azi) şi China. 
+
+                         </p>
+                        <h4>Partea III - Clauze politice europene</h4>
+                        <h4>Secţiunea III – România</h4>
+                        <p style="text-indent:50px">
+                            Art. 45. Ungaria renunţă, în ceea ce o priveşte, în favoarea României, la toate drepturile şi titlurile asupra teritoriilor fostei monarhii austro-ungare situate dincolo de fruntariile Ungariei, astfel cum sunt fixate la art. 27, partea II-a (Fruntariile Ungariei) şi recunoscute prin prezentul tratat sau prin orice alte tratate, încheiate în scop de a regula afacerile actuale, ca făcând parte din România.
+                            Art. 46. O comisiune compusă din şapte membrii, din care cinci vor fi numiţi de principalele Puteri aliate şi asociate, unul de România şi unul de Ungaria, se va constitui în cursul celor 15 zile de la punerea în vigoare a tratatului de faţă pentru a fixa la faţa locului traseul liniei de fruntarie descrisă la art. 27, Partea II (Fruntariile Ungariei).
+                            Art. 47. România recunoaşte şi confirmă faţă de Ungaria angajamentul de a consimţi la inserţiunea într-un tratat cu principalele puteri aliate şi asociate a unor dispoziţiuni pe care aceste puteri le vor socoti necesare pentru a ocroti în România interesele locuitorilor care se deosebesc prin rasă, limbă sau religiune de majoritatea populaţiunii, precum şi pentru a ocroti libertatea tranzitului, de a aplica un regim echitabil comerţului celorlalte naţiuni.
+                            Proporţia şi natura sarcinilor financiare ale Ungariei pe care România va avea să le ia pe seama sa pentru teritoriul pus sub suveranitatea ei vor fi fixate conform cu art. 186, partea IX (Clauze financiare) a tratatului de faţă.
+                            Convenţii ulterioare vor regula toate chestiunile care n-ar fi regulate prin tratatul de faţă şi care ar putea lua naştere din cesiunea zisului teritoriu. […]
+                            <h4>Secţiunea IX - Dispoziţiuni generale</h4>
+                            Art. 74. Ungaria declară de pe acum că recunoaşte şi primeşte fruntariile Austriei, Bulgariei, Greciei, Poloniei, României, Statului Sârbo-Croato-Sloven şi ale Statului Ceho-Slovac, astfel precum aceste fruntarii  vor fi fixate de către principalele puteri aliate şi asociate.
+                        </p>
+                        <p style="text-allign:right">“Monitorul oficial”, din 21 septembrie 1920</p>
+                        <nav class="next-prev">
+					        <a class="prev year1918" href="#year1918">Prev</a>
+					        <hr />
+                            <a class="next romania" href="#romania">Next</a>
+                        </nav>
+                    </article>
+                    <article class="slide6" id="Article8">
+                        <header><h1>Tratatul de pace cu Bulgaria</h1></header>
+                        <h4>Neuilly sur Seine, 27 noiembrie 1919</h4>
+                        <p style="text-indent:50px">
+                        Tratatul este divizat în 13 capitole. Primul capitol parte este reprezentată de Pactul Societății Națiunilor. Al doilea definește frontierele Bulgariei.
+Tratatul cuprinde de asemenea, o serie de dispoziții referitoare la limitarea forțelor armate ale Bulgariei, predarea materialului militar, navigația pe Dunăre etc. Pentru Bulgaria, care era în război începând din 1912, dispozițiile tratatului au fost considerate deosebit de severe, astfel că tratatul a fost considerat o catastrofă națională. Teritoriul Bulgariei era aproape același ca și la începutul războaielor balcanice, iar pierderile umane fuseseră deosebit de ridicate.
+
+Urmări
+Bulgaria, ca și celelalte state învinse în primul război mondial a urmărit să revizuiască Tratatul de la Neuilly, apropiindu-se de Germania și Italia în perioada interbelică. În anul 1940 în contextul prăbușirii frontierelor României, Bulgaria a obținut prin Tratatul de la Craiova din 7 septembrie 1940, Cadrilaterul.
+În anul 1941, în alianță Cu Germania, Bulgaria a ocupat teritoriile anexate de către Regatul Sârbo-Croato-Sloven (devenit în 1929 Iugoslavia), Tracia Occidentală și Insula Tasos din Marea Egee. După al doilea război mondial, ieșirea la Marea Egee a fost din nou pierdută, iar "regiunile occidentale" au intrat în componența Iugoslaviei, ca urmare a unui acord bilateral încheiat în anul 1947.
+Singurul câștig teritorial recunoscut prin Tratatele de pace de la Paris încheiate cu statele învinse în al doilea război mondial a fost menținerea Cadrilaterului în cadrul statului bulgar (articolul 1 al Tratatelor de Pace cu Bulgaria și România).
+</p>
+                        <nav class="next-prev">
+					        <a class="prev year1918" href="#year1918">Prev</a>
+					        <hr />
+                            <a class="next romania" href="#romania">Next</a>
+                        </nav>
+                    </article>
+                    <article class="slide6" id="Article9">
+                        <header><h1>Tratatul de pace cu Turcia</h1></header>
+                        <h4>Sèvres (10 august 1920)9</h4>
+                        <p style="text-indent:50px">
+Delegații au semnat tratatul în sala de expoziție a fabricii de porțelan din Sèvres, Franța. Tratatul de la Sèvres a fost un tratat de pace dintre Imperiul Otoman și Puterile Aliate semnat la sfârșitul Primului Război Mondial.
+Tratatul a fost semnat de patru reprezentanți ai Imperiului Otoman, care aveau împuterniciri depline din partea sultanului Mehmed al VI-lea. La semnarea tratatului de pace nu au participat Statele Unite ale Americii și Rusia. Rusia a fost exclusă datorită semnării Tratatului de la Brest-Litovsk din 1918. În cadrul tratatului de la Sevres, la insistențele marelui vizir Talat Pașa, Imperiul Otoman a reprimit teritoriile pe care le pierduse în fața Imperiului Rus în timpul războiului din 1877 - 1978, (Ardahan, Kars și Batumi. Sir George Dixon Grahame a semnat pentru Regatul Unit al Marii Britanii și Irlandei, Alexandre Millerand pentru Franța și contele Lelio Bonin Longare pentru Italia.
+
+România, a fost membră fondatoare a Societăţii Naţiunilor şi participantă activă la elaborarea Pactului, dar – din diverse motive, pentru perioade mai scurte sau mai lungi – foarte multe state au rămas în afara ei, privând organizaţia internaţională de aportul acestora la menţinerea păcii şi securităţii în lume.
+</p>
+                        <nav class="next-prev">
+					        <a class="prev year1918" href="#year1918">Prev</a>
+					        <hr />
+                            <a class="next romania" href="#romania">Next</a>
+                        </nav>
+                    </article>
+
+                    <article class="slide6" id="div111">
+                        <header>
+					        <h1>Bilantul</h1>
+				        </header>
+				        <img src="img/bilantul.png" id="bilantul" style="margin:auto;" alt="Bilantul Primului Razboi Mondial"/>
+                    </article>
+                    <article class="slide6" id="Article4">
+                        <header>
+					        <h1>Bilantul</h1>
+				        </header>
+				        <img src="soldati.png" id="soldati" style="margin:auto;" alt="Soldati morti"/>
+                    </article>
+                    <article class="slide6" id="Article5">
+                        <header>
+					        <h1>Bilantul</h1>
+				        </header>
+				        <img src="civili.png" id="civili" style="margin:auto;" alt="Civili morti"/>
+                    </article>
+                </div>
+            </div>
+            <article id="romania">
+			<div id="a1">
+                <div id="a2">
+                    <div id="a3">
+                        <div id="a4">
+                            <div id="a5">
+                                <div id="i0" class="simple_slide">
+                                    <h1>Browser-ul este invechit, pentru a vedea acest continut va rugam sa va instalati un browser modern cu suport pentru HTML5 si CSS3.</h1>
+                                </div>
+                                <div id="i1" class="simple_slide">
+                                    <div id="div12" style="width:auto; height:auto; text-align:center;">
+                                    <header>
+						                <h1>Romania in timpul razboiului</h1>
+					                </header>
+                                    <h1 style="font-size:35px;">1.Neutralitatea sau "anii așteptării"</h1>
+                                    </div>
+                                    <a href="#a5" class="backbutton"></a>
+                                    <a href="#a2" class="nextbutton"></a>
+                                    <div id="text1" style="margin-left:100px; margin-right:100px; line-height:140%; margin-top:10px; margin-bottom:20px; text-indent:50px;">
+                                        <h5><strong>a) Izbucnirea războiului și adoptarea neutralității</strong></h5>
+                                        <p>     În cursul lunii iulie, cele două blocuri, Puterile Centrale și Antanta, 
+                                                au făcut presiuni insistente la București, fie pentru o angajare imediată în război, 
+                                                în cazul Puterilor Centrale, fie pentru o neutralitate binevoitoare, într-o primă etapă, 
+                                                în cazul Antantei.
+                                        </p>
+                                        <p>     În fața unei decizii grave, bătrânul rege Carol I a considerat consultarea tutror 
+                                                factorilor politici. Ca urmare la 3 august 1914 a convocat Consiliul de Coroană, 
+                                                la care, pe lângă membrii guvernului, au luat parte regele, prințul Ferdinand și 
+                                                principalii oameni politici, reprezentând toate partidele și orientările politice.
+		                                </p>
+                                        <p>     Regele fidel angajamentelor asumate prin semnătura depusă pe tratatul de alianță cu Austro-Ungaria, a prezentat, 
+                                                pentru prima oară, conținutul tratatului celor prezenți și a cerut intrarea în război alături de 
+                                                Puterile Centrale. În acelaș timp, ținea să precizeze:"Sunt rege constituțional, și nu voi 
+                                                declara singur război."Aceasta demonstrează că pentru regele Carol I interesele naționale 
+                                                au prevalat, în acel moment, asupra altor considerente și principii.
+                                        </p>
+                                        <h5><strong>b) Între Antantă și Puterile Centrale</strong></h5>
+                                        <p>     În cei doi ani de neutralitate, cele două tabere beligerante au făcut numeroase demersuri la București, 
+                                                fie pentru atragerea României în război, fie pentru menținerea ei în stare de neutralitate. Dacă la început 
+                                                Puterile Centrale au reclamat imperios alăturarea României de partea lor, pe parcurs, în fața unei opinii 
+                                                publice tot mai doritoare de o intervenție militară de partea Antantei în vederea eliberării teritoriilor 
+                                                românești de sub dominație austro-ungară, Germania și Austro-Ungaria s-au anunțat pentru o neutralitate definitivă.
+                                        </p>
+                                        <p>     Pe parcursul neutralității, președintele Consiliului de Miniștr, I. I. C. Brătianu, care și-a 
+                                                asumat cu o responsabilitate deosebită conducerea politicii externe românești, a inițiat și a 
+                                                condus tratative de angajare a României în război numai și cu Antanta.El a amânat intrarea în 
+                                                război timp de doi ani.
+                                        </p>
+                                        <p>     Un prim succes privind dreptul României de a-și lipi teritorile locuite de românii din Austro-Ungaria, 
+                                                a fost obținut prin semnarea, la 1 octombrie 1914, a convenției ruso-române, de către S. D. Sazonov și 
+                                                C-TIN Diamandy. Prin conveție, Rusia recunoaște dreptul României de a ocupa teritoriile austro-ungare 
+                                                locuite de români, dacă va adopta față de Antantă o neutralitate binevoitoare.
+                                        </p>
+		                                <p>    Pe fondul unei mișcări interne tot mai puternice, care reclama intrarea în război alături de Antantă, 
+                                                a survenit moartea regelui Carol I , decedat la 10 octombrie 1914 și înmormântat la Curtea de Argeș.
+                                                Carol I a fost urmat la tron de Ferdinand I.
+                                        </p>
+                                        <h5><strong>c) Presiunile opiniei publice românești</strong></h5>
+                                        <p>     Încă din toamna anului 1914, sub impulsul "Ligii pentru unitatea culturală a tuturor românilor", 
+                                                devenită acum "Liga pentru unitatea politică a tuturor românilor", condusă printre alții de 
+                                                N. Iorga, Vasile Lucaciu, B. ȘT. Delavrancea, Octavian Goga, a "Acțiunii Naționale", condusă de 
+                                                N.Filipescu, s-a sefășurat la București și ăn alte orașe din țară mari manifestații, uneori foarte 
+                                                zgomotoase, care anunțau intervenția imediată în război alături de Antantă.Angajarea în război față 
+                                                de aceasta persupunea depășirea unor dificultăți economice, politice și militare care s-au datorat 
+                                                situației geopolitice a României.
+                                        </p>
+                                    </div>
+                                    <nav class="next-prev">
+						                <a class="prev year1919" href="#year1919">Prev</a>
+						                <hr />
+                                        <a class="next gallery"  href="#gallery">Next</a>
+                                    </nav>
+                                </div>
+                                <div id="i2" class="simple_slide">
+                                    <a href="#a1" class="backbutton"></a>
+                                    <a href="#a3" class="nextbutton"></a>
+                                    <div id="div2" style="width:auto; height:auto; text-align:center;">
+                                        <h1 style="font-size:35px;">1.Neutralitatea sau "anii așteptării"</h1>
+                                        <ul style="list-style-type: none;">
+                                            <li><a href="PDF/1.pdf" target="_blank">Convenția militară ruso-română anexată tratatului de alianță din 1916</a> <br /></li>
+                                            <li><a href="PDF/2.pdf" target="_blank">Declaratia de razboi a Romaniei inaintata Austro-Ungariei la 14 august 1916</a> <br /></li>
+                                            <li><a href="PDF/3.pdf" target="_blank">Tratatul de alianță între România, Rusia, Franta, Anglia si Italia incheiat la 17 august 1916</a></li>
+                                        </ul>
+                                    </div>
+                                    <div id="Div4" style="margin-left:100px; margin-right:100px; line-height:150%; margin-top:10px; margin-bottom:20px; text-indent:50px;">                               
+                                            <h5>d) Pregătiri diplomatice și militare pentru intrarea în război</h5>
+                                                    <p> După tratative lungi și anevoioase, în cursul anului 1915, Antanta a recunsocut legitimitatea ocupării Banatului, Bucovinei și Transilvaniei de către România, solicitând-o să intre mereu în război. Insistențele erau mai presanta în perioada în care puterile Triplei Înțelegeri sufereau înfrângeri pe frontul de luptă, așa cum s-a întâmplat în vara anului 1915, când trupele rusești au fost învinse pe frontul de est, sau în toamna aceluiași an, când Serbia a fost scoasă din luptă. 
+		                                            La aceste presiuni, președintele Consiliului de Miniștri român răspunde  că războiul va fi îndelungat, precizând la un moment dat că el va angaja România în război doar când "va fi sigur 75% că Romănia nu va  fi distrusă".
+		                                            Ca urmare, I. C. Brătianu n-a amânat intrarea în război a României ci a căutat să intre în conflict în condiții potime din punct de vedere opilitic și militar.
+                                                    </p>
+                                            <h5>e) Presiunile puterilor Antantei</h5>
+		                                        <p>    În cursul anului 1916 a fost angajată bătălia de la Verdum, una dintre cele mai epuizante și obositoare pentru Franța. Guvernul și Marele Cartier General Francez au considerat noile condiții "deosebit de favorabile" intervenției României și au insistant pe lângă guvernul rus să accepte toate condițiile reclemate de guvernul român, pentru a-l angaja cât mai grabnic în luptă. În atari împrejurări, generalul Alexeev, șeful Marelui Cartier General rus, transmite la București, la 1 iulie 1916, "faimoasa telegramă" printre care soma România să intre în război "cum ori niciodată".
+		                                            După o lună de tergiversări, la începutul lunii august 1916, România a semnat alături de puterile Antantei două documente secrete de o deosebită importanță: Tratatul de alianță și Convenția militară.
+                                            </p><h5>f)  Intrarea în război împotriva Puterilor Centrale</h5>
+                                                    <p> <a href="PDF/1.pdf" target="_blank">Tratatul de alianță și Convenția militară au fost semnate , între România și cele patru puteri, într-o discreție desăvârșită, la moșia familei Brătianu de la Florica, în dimineața zilei de 4-17 august 1916.</a>Conform convenției politice, România se obliga să declare război numai Austro-Ungariei și să intre în conflict împotriva acesteia, nu mai târziu de 15/28 august 1916.
+		                                            Odată prafate cele două convenții, la 14/27 august a fost convocat Consiliul de Coroană, sub președenția regelui Ferdinand. Ion I. C. Brătianu a prezentat conținutul înțelegerilor cu Antanta și a cerut intrarea României în război. Toți cei prezenți, cu excepția lui Titu Maiorescu și a lui P. P. Carp, care susținea politica de expectativă, s-au declarat de acord și au susținut decizia guvernului.
+		                                            <a href="PDF/2.pdf" target="_blank">În aceași seară, 14/27 august, ministrul român la Viena, Edgard Mavrocordat, a înmânat ministerului de externe austro-ungar declarația de război. "România- se preciza în declarație-, departe de a uita legăturile de sânge cu românii suspuși monarhiei austro-ungare, a putut constata că speranța ce ne puseserăm pe adeziunea noastră la Tripla Alință a fost înșelată (...) România se vede nevoită a intra în luptă alături de aceia care pot să-i asigure înfăptuirea unității naționale".</a>
+                                                        </p>
+                                    </div>
+                                    <nav class="next-prev">
+						                <a class="prev year1919" href="#year1919">Prev</a>
+						                <hr />
+                                        <a class="next gallery"  href="#gallery">Next</a>
+                                    </nav>
+                                </div>
+                                <div id="i3" class="simple_slide">
+                                    <a href="#a2" class="backbutton"></a>
+                                    <a href="#a4" class="nextbutton"></a>
+                                    <div id="heaferuli3" style="width:auto; height:auto; text-align:center;">
+                                        <h1>2.Anii războiului</h1>
+                                    </div>
+                                    <div id="texti3" style="margin-left:100px; margin-right:100px; line-height:150%; margin-top:10px; margin-bottom:20px; text-indent:50px;">
+                                        <h5>a) Campania din Transilvania și ofensiva deinspre Dunăre a Puterilor Centrale</h5>
+                                        <p>Operațiile militare au început în noaptea de <strong>27/28 august 1916</strong>, într-o atmosferă de entuziasm general, deși armata românî era deficitară în privința dotării, în artiliere grea, mitraliere și aviație. Primite cu brațele deschise și cu o bucurie nedisimulată de către populația română transilvăneană, trupele române au ocupat cu ușurință Brașovul, Toplița, pătrunzând în zona secuiască.
+                                        În timpă ce se ptereceau aceste evenimente fericite , <strong>Bulgaria declara război României</strong> și, la <strong>1 septembrie 1916</strong>, trupele germano-bulgaro-turce, conduse de generalul Mackensen, au provocat o înfrângere gravă trupleor românești.
+                                        Marele Cartier General Român, condus de generalul Constantin Prezan, a încercat să contracareze înfrângerea de la Turturica printr-o operațiune de traversare rapidă a Dunării și de încercuire a inamicului.Operațiunea a eșuat. Luptele din Dobrogea au continuat până la sfârșitul <strong>lunii octombrie</strong>, când românii au fost nevoiți să se retragă cu pierderi grele. 
+                                        În Transilvania, după luptele aprige, trupele Puterilor Centrale au rupt apărarea romănească în Banat și pe crestele Carpaților Meridionali. În schimb, Eremia Grigorescu, a apărat trecătorile Moldovei, sub lozinca, ce va căpăta în 1917 valoare de simbol, "pe aici nu se trece".</p>
+                                        
+                                        <h5>b) Ocuparea Bucureștiului și retragerea în Moldova</h5>
+                                        <p>Cu toată apărarea eroică de pe Jiu, trupele inamica au pătruns trecătorile Carpaților Meridionali și s-au revărsat în Câmpia Română.Presate ca într-un clește trupele române au încercat o bătălie disperată în zona Argeș-Neajlov, pe care au pierdut-o, capitala rămâne deschisă înaintării trupelor inamice.La <strong>23 octombrie/ 6 decembrie 1916</strong> trupele conduse de Mackensen au intrat în București.Guvernul, autoritățiile, armata și o parte a locuitorilor s-au retras în Moldova, la Iași, care devine capitala unei Românii mai restrânse .
+                                        Intrarea României în război, într-un moment de epuizare materială și morlă a francezilor datorită bătăliei de la Verdum, a tonificat rezistența franceză, mai cu seamă că Marele stat Major  a prelevat de frontul de vest și de pe alte fronturi divizii de elită în scopul scoaterii României din război.
+                                        Pe teritoriul rămas sub autoritatea regelui și a guvernului de la Iași, a început o muncă de refacere a armatei române.Lipsa tifosului exantematic a afectat 30.000 de persoane. Parlamentul reunit la Iași a aaprobat efectuarea a două reforme: reforma electorală și reforma agrară.
+                                        În condițiile de atunci, de extremă gravitate pentru țară, guvernul român, neprevăzând ceea ce se va întâmpla  mai apoi, a depus în Rusia, spre păstrare, tezaurul național. El conține: arhivele, devize, mari valori de artă, lingouri de aur, tezaururl Casei Regale, obiecte de valoare ale Mitropoliei Ungro-Valahiei.</p>
+                                        
+                                        <h5>c) Campania din vara anului 1917</h5>
+                                        <p>Până în luna <strong>mai 1917</strong>, armata română, ce grupa 460.00 de soldați și ofițeri, era refăcută, dotată cu armament modern și avea un moral ridicat. Alături de misiunea franceză, în ridicare moralului soldaților un rol deosebit l-a avut regina Maria, care a organizat sub patronajul său Crucea Roșie.
+                                        Puterile Centrale erau decise să scoată România din război, printr-un atac combinat al lui Mackensen disnrep sud și o ofensivă la Oituz, pentru a prinde trupele române din Moldova într-un clește și a le forța să capituleze.
+                                            Marile bătălii din <strong>vara anului 1917</strong>, desfășurate la <strong>Mărășești, Mărăști și Oituz</strong> au debutat cu <strong>ofensiva din 11 iulie a armatei a II-a române</strong>, condusă de generalul <strong>Alexandru Averesc</strong>, dispusă în spațiul <strong>Onești- Adjud.</strong> În zona Mărăști trupele inamice au fost dislocate și li s-au pricinuit mari pierderi. Succesul obținut de armata română n-a putut fi însă exploatat, datorită faptului că armata rusă, într-un profund proces de deorganizare datorat pătrunderii propagandei bolșevice printre soldați, s-a retras din Galiția și nordul Bucovinei.</p>
+                                    </div>
+                                    <br />
+                                    <nav class="next-prev">
+						                <a class="prev year1919" href="#year1919">Prev</a>
+						                <hr />
+                                        <a class="next gallery"  href="#gallery">Next</a>
+                                    </nav>
+                                </div>
+                                <div id="i4" class="simple_slide">
+                                    <a href="#a3" class="backbutton"></a>
+                                    <a href="#a5" class="nextbutton"></a>
+                                    <div id="Div6" style="width:auto; height:auto; text-align:center;">
+                                        <h1>2.Anii războiului</h1>
+                                    </div>
+                                    <div id="Div7" style="margin-left:100px; margin-right:100px; line-height:150%; margin-top:10px; margin-bottom:20px; text-indent:50px;">
+                                    <h5>d) Defecțiunea Rusiei</h5>
+                                    <p> Evenimentele desfășurate în Rusia, în toamna anului 1917, care au condus la instaurarea guvernului bolșevic, la 7 noiembrie 1917, au schimbat radical situația militară și politică, devenind un pericol pentru autoritățile românești și pentru ordinea socială în România.
+                                        La 3 decembrie începeau tratativele de armistițiu dintre Rusia și Puterile Centarle , la Brest-Litovsk. În aceiași zi comandantul trupelor ruse din Moldova, generalul Scerbacev, comunica regelui Ferdinand și premierului I.I.C. Brătianu că nu mai poate stăpâni armata și că a decis începerea negocierilor cu generalul Mackensen. Noua situație condamna și România să procedeze la fel și, la 9 decembrie, România deși vitorioasă, în luptele din vară, a fost nevoită sp semneze armistișiu cu Puterile Centrale.
+                                        Dacă reprezentanții puterilor Antantei la Iași au recunsocut necesitatea unei asemenea decizii, șefii guvernelorlor au fost foarte criticila adresa guvernului român. George Clemenceanu " Da, domnilor, în fața poporului român îmi scot respectos, pălăria, înaintea, însă, a politicienilor dv., mă acopăr."
+                                        Guvernul bolșevic, condus de Lenin, arestează ministrul român la Petrograd, C.Diamandy, și personalul ambasadei. Ei vor fi eliberați a doua zi, la intervenția șefilor a 20 de misiuni diplomatice, dar la 26 ianuarie Rusia sovietică rupe relațiile diplomatice cu România și sechestrează tezaurul românesc depus de Moldova.
+                                    </p>
+                                    <h5>e) Pacea separată la București</h5>
+                                    <p>
+                                        Lipsită de orice sprijin, asupra României se exercită presiunui crescând ale Puterilor Cnetrale în vederea încheierii unei păci separate. În urma ultimatului, la 7 februarie 1918, I. I.C. Brătianu demisionează, alcătuindu-se un guvern condus de Alexandru Averescu.
+                                        România trebuia să alegă între o pace umilitoare și ocuparea de către inamic a întregului teriotoriu al țării. S-a decis acceptarea păcii. În fața pretenților  Austro-Ungarie, Alexandru Averescu demisionează. Regele încredințează formarea guvernului lui Alexandru  Marghiloman.
+                                        După unele prelimanarii la Buftea, pacea s-a semnat la București, în ziua de 7 mai 1918.
+                                    </p>
+                                    <h5>f) Revenirea în tabăra Antantei.</h5>
+                                    <p>Pe fondul victoriilor obținute de aliații occidentali, în vara și toamna anului 1918, la 6 noiembrie guvernul Marghiloman demisionează, fiind alcătuit un nou cabinet sub președenția generalului Coandă. Noul guvern a decretat imediat mobilizarea generală și a cerut trupelor germane să părăsească țara. La 10 noiembrie 1918, România a declarat război Germaniei și a a nunțat caducitatea păcii de la București. Desigur că gestul României a avut mai mult o importanță simbolică și politică decât militară, dar la 11 noiembrie, când se punea capăt Primului Război Mondial, România se găsea din nou în tabăra aliaților occidentali.</p>
+                                    <br />
+                                    <br />
+                                    <h5>România a acceptat riscul grav al angajării sale în război, care s-a soldat cu mari jertfe-339.117 morți și 299.00 răniți, urmărind realizarea obiectivului său politic major de la începutul secolului al XX-lea, unirea tututror românilor și a teritorilor locuite de ei în granițele aceluiaș stat, ROMÂNIA MARE!</h5>
+                                    
+                                    </div>
+                                    
+                                    <nav class="next-prev">
+						                <a class="prev year1919" href="#year1919">Prev</a>
+						                <hr />
+                                        <a class="next gallery"  href="#gallery">Next</a>
+                                    </nav>
+                                </div>
+                                <div id="i5" class="simple_slide">
+                                    <a href="#a4" class="backbutton"></a>
+                                    <a href="#a1" class="nextbutton"></a>
+                                    <h1>3.Evolutia Romaniei intre anii 1859 si 2010</h1>
+                                    <img src="img/romania_animation.gif" alt="Romanian animation" style=" float:left; border-width:50px; border-color:#000000"/>
+                                    <div id="yeears" style="text-indent:15px;">
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <h4>1859-1862 : Principatele Unite ale Valahiei si Moldovei</h4>
+                                        <h4>1862-1878 : Principatele Unite Romane</h4>
+                                        <h4>1878-1881 : Princiatele Unite Romane</h4>
+                                        <h4>1881-1913 : Regatul Romaniei</h4>
+                                        <h4>1913-1918 : Regatul Romaniei</h4>
+                                        <h4>1918-1940 : Regatul Romaniei</h4>
+                                        <h4>1940-1941 : Regatul Romaniei</h4>
+                                        <h4>1941-1944 : Regatul Romaniei</h4>
+                                        <h4>1944-1947 : Regatul Romaniei</h4>
+                                        <h4>1947-1965 : Republica Populara Romania</h4>
+                                        <h4>1965-1989 : Republica Socialista Romania</h4>
+                                        <h4>1989-2010 : Romania (Republica):</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </article>
+            <article id="gallery">
+                    <header><h1>Galerie imagini</h1></header>
+                    <div id="flashContent">
+			            <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="933" height="700" id="Object1" align="middle">
+				            <param name="movie" value="gallery.swf" />
+				            <param name="quality" value="high" />
+				            <param name="bgcolor" value="#ffffff" />
+				            <param name="play" value="true" />
+				            <param name="loop" value="true" />
+				            <param name="wmode" value="window" />
+				            <param name="scale" value="showall" />
+				            <param name="menu" value="true" />
+				            <param name="devicefont" value="false" />
+				            <param name="salign" value="" />
+				            <param name="allowScriptAccess" value="sameDomain" />
+                            <param name="wmode" value="opaque" />
+				            <!--[if !IE]>-->
+				            <object type="application/x-shockwave-flash" data="gallery.swf" width="933" height="700">
+					            <param name="movie" value="gallery.swf" />
+					            <param name="quality" value="high" />
+					            <param name="bgcolor" value="#ffffff" />
+					            <param name="play" value="true" />
+					            <param name="loop" value="true" />
+					            <param name="wmode" value="window" />
+					            <param name="scale" value="showall" />
+					            <param name="menu" value="true" />
+					            <param name="devicefont" value="false" />
+					            <param name="salign" value="" />
+					            <param name="allowScriptAccess" value="sameDomain" />
+                                <param name="wmode" value="opaque" />
+				            <!--<![endif]-->
+					            <a href="http://www.adobe.com/go/getflash">
+						            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					            </a>
+				            <!--[if !IE]>-->
+				            </object>
+				            <!--<![endif]-->
+			            </object>
+		            </div>
+                    <nav class="next-prev">
+						<a class="prev romania" href="#romania">Prev</a>
+						<hr />
+                    </nav>
+                </article>
+        </div>
+        <div class="fooot">
+            <table style="position: absolute; top: 9401px; left: 50%; right: 50%; margin-right: -450px; margin-left: -450px; height: auto; width: 900px;">
+                <tr style="font-family: Calibri; color: #000000; font-size: 30px; text-transform: none">
+                    <td style="font-weight: bold; font-size: 30px;" class="auto-style2" height="20">Autorii</td>
+                    <td style="font-weight: bold; font-size: 30px;" class="auto-style1" height="20">Navigheaza</td>
+                    <td style="font-weight: bold; font-size: 30px;" height="20">Bibliografie</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr style="font-family: Calibri; color: #000000; font-size: 20px; text-transform: none">
+                    <td class="auto-style2" style="color: #FFFFFF; font-weight: bold; font-style: normal; font-variant: normal; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" height="20">Bucsa Darius</td>
+                    <td class="auto-style1" style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"><a class="year1914" href="#year1914">Anul 1914</a></td>
+                    <td style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20">„Primul Razboi Mondial 1914-1918” Mircea N. Popa.</td>
+                </tr>
+                <tr style="font-family: Calibri; color: #000000; font-size: 20px; text-transform: none">
+                    <td class="auto-style2" style="color: #FFFFFF; font-weight: bold; font-style: normal; font-variant: normal; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" height="20">Marton Daniela</td>
+                    <td class="auto-style1" style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"><a class="year1915" href="#year1915">Anul 1915</a></td>
+                    <td style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20">"Manual multifunctional de istorie moderna a Romaniei" Universitatea Babes Bolyai Catedra de istorie moderna</td>
+                </tr>
+                <tr style="font-family: Calibri; color: #000000; font-size: 20px; text-transform: none">
+                    <td class="auto-style2" style="color: #FFFFFF; font-weight: bold; font-style: normal; font-variant: normal; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" height="20">Moldovan Georgiana</td>
+                    <td class="auto-style1" style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"><a class="year1916" href="#year1916">Anul 1916</a></td>
+                    <td style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"><a href="http://www.wikipedia.ro">Wikipedia</a></td>
+                </tr>
+                <tr style="font-family: Calibri; color: #000000; font-size: 20px; text-transform: none">
+                    <td class="auto-style2" style="color: #FFFFFF; font-weight: bold; font-style: normal; font-variant: normal; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" height="20">Poenar Bianca</td>
+                    <td class="auto-style1" style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"><a class="year1917" href="#year1917">Anul 1917</a></td>
+                    <td style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"><a href="http://scriptube.com">Scritube</a></td>
+                </tr>
+                <tr style="font-family: Calibri; color: #000000; font-size: 20px; text-transform: none">
+                    <td class="auto-style2" style="color: #FFFFFF; font-weight: bold; font-style: normal; font-variant: normal; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" height="20">Rusu Cosmin</td>
+                    <td class="auto-style1" style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"><a class="year1918" href="#year1918">Anul 1918</a></td>
+                    <td style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"></td>
+                </tr>
+                <tr style="font-family: Calibri; color: #000000; font-size: 20px; text-transform: none">
+                    <td class="auto-style2" style="color: #FFFFFF; font-weight: bold; font-style: normal; font-variant: normal; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" height="20"></td>
+                    <td class="auto-style1" style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"><a class="year1919" href="#year1919">Anul 1919</a></td>
+                    <td style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"></td>
+                </tr>
+                <tr style="font-family: Calibri; color: #000000; font-size: 20px; text-transform: none">
+                    <td class="auto-style2" style="color: #FFFFFF; font-weight: bold; font-style: normal; font-variant: normal; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;" height="20"></td>
+                    <td class="auto-style1" style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"><a class="romania" href="#romania">Romania in timpul razboiului</a></td>
+                    <td style="color: #FFFFFF; font-weight: bold; table-layout: auto; font-size: 14px; border-spacing: 0px;" height="20"></td>
+                </tr>
+            </table>
+            <h4 style=" width:100%; position: absolute; top: 9361px; text-align:center; left: -2px;" class="auto-style3"><a href="WindowsFormsApplication1.exe">Click pentru a lansa aplicatia cu care va puteti testa cunostiintele despre Primul Razboi Mondial!</a></h4>
+            <h4 style=" width:100%; position: absolute; top: 9700px; text-align:center;" class="auto-style3">Navigati cu mouse-ul pe una din poze!</h4>
+            <div id="team1" style="position: absolute; top: 9740px; width: 200%;">
+                <img src="cosmin.jpg" id="cosmin" alt="Cosmin Rusu" height="200" style="float: left;" />
+            </div>
+        </div>
+    </form>
+    <!-- Script to final for faster load -->
+    <script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/modernizr.custom.37797.js"></script>
+    <script type="text/javascript" src="js/parallax.js"></script>
+    <script type="text/javascript" src="js/slicing.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var currentPosition = 0;
+            var slideWidth = 820;
+            var slides = $('.slide');
+            var numberOfSlides = slides.length;
+
+            // Remove scrollbar in JS
+            $('#slidesContainer').css('overflow', 'hidden');
+
+            // Wrap all .slides with #slideInner div
+            slides
+              .wrapAll('<div id="slideInner"></div>')
+              // Float left to display horizontally, readjust .slides width
+              .css({
+                  'float': 'left',
+                  'width': slideWidth
+              });
+
+            // Set #slideInner width equal to total width of all slides
+            $('#slideInner').css('width', slideWidth * numberOfSlides);
+
+            // Insert controls in the DOM
+            $('#slideshow')
+              .prepend('<span class="control" id="leftControl">Clicking moves left</span>')
+              .append('<span class="control" id="rightControl">Clicking moves right</span>');
+
+            // Hide left arrow control on first load
+            manageControls(currentPosition);
+
+            // Create event listeners for .controls clicks
+            $('.control')
+              .bind('click', function () {
+                  // Determine new position
+                  currentPosition = ($(this).attr('id') == 'rightControl') ? currentPosition + 1 : currentPosition - 1;
+
+                  // Hide / show controls
+                  manageControls(currentPosition);
+                  // Move slideInner using margin-left
+                  $('#slideInner').animate({
+                      'marginLeft': slideWidth * (-currentPosition)
+                  });
+              });
+
+            // manageControls: Hides and Shows controls depending on currentPosition
+            function manageControls(position) {
+                // Hide left arrow if position is first slide
+                if (position == 0) { $('#leftControl').hide() } else { $('#leftControl').show() }
+                // Hide right arrow if position is last slide
+                if (position == numberOfSlides - 1) { $('#rightControl').hide() } else { $('#rightControl').show() }
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var currentPosition = 0;
+            var slideWidth = 470;
+            var slides = $('.slide2');
+            var numberOfSlides = slides.length;
+
+            // Remove scrollbar in JS
+            $('#slidesContainer2').css('overflow', 'hidden');
+
+            // Wrap all .slides with #slideInner div
+            slides
+              .wrapAll('<div id="slideInner2"></div>')
+              // Float left to display horizontally, readjust .slides width
+              .css({
+                  'float': 'left',
+                  'width': slideWidth
+              });
+
+            // Set #slideInner width equal to total width of all slides
+            $('#slideInner2').css('width', slideWidth * numberOfSlides);
+
+            // Insert controls in the DOM
+            $('#slideshow2')
+              .prepend('<span class="control2" id="leftControl2">Clicking moves left</span>')
+              .append('<span class="control2" id="rightControl2">Clicking moves right</span>');
+
+            // Hide left arrow control on first load
+            manageControls(currentPosition);
+
+            // Create event listeners for .controls clicks
+            $('.control2')
+              .bind('click', function () {
+                  // Determine new position
+                  currentPosition = ($(this).attr('id') == 'rightControl2') ? currentPosition + 1 : currentPosition - 1;
+
+                  // Hide / show controls
+                  manageControls(currentPosition);
+                  // Move slideInner using margin-left
+                  $('#slideInner2').animate({
+                      'marginLeft': slideWidth * (-currentPosition)
+                  });
+              });
+
+            // manageControls: Hides and Shows controls depending on currentPosition
+            function manageControls(position) {
+                // Hide left arrow if position is first slide
+                if (position == 0) { $('#leftControl2').hide() } else { $('#leftControl2').show() }
+                // Hide right arrow if position is last slide
+                if (position == numberOfSlides - 1) { $('#rightControl2').hide() } else { $('#rightControl2').show() }
+            }
+        });
+    </script>
+    <script type="text/javascript">
+            $(document).ready(function () {
+                var currentPosition = 0;
+                var slideWidth = 820;
+                var slides = $('.slide3');
+                var numberOfSlides = slides.length;
+
+                // Remove scrollbar in JS
+                $('#slidesContainer3').css('overflow', 'hidden');
+
+                // Wrap all .slides with #slideInner div
+                slides
+                  .wrapAll('<div id="slideInner3"></div>')
+                  // Float left to display horizontally, readjust .slides width
+                  .css({
+                      'float': 'left',
+                      'width': slideWidth
+                  });
+
+                // Set #slideInner width equal to total width of all slides
+                $('#slideInner3').css('width', slideWidth * numberOfSlides);
+
+                // Insert controls in the DOM
+                $('#slideshow3')
+                  .prepend('<span class="control3" id="leftControl3">Clicking moves left</span>')
+                  .append('<span class="control3" id="rightControl3">Clicking moves right</span>');
+
+                // Hide left arrow control on first load
+                manageControls(currentPosition);
+
+                // Create event listeners for .controls clicks
+                $('.control3')
+                  .bind('click', function () {
+                      // Determine new position
+                      currentPosition = ($(this).attr('id') == 'rightControl3') ? currentPosition + 1 : currentPosition - 1;
+
+                      // Hide / show controls
+                      manageControls(currentPosition);
+                      // Move slideInner using margin-left
+                      $('#slideInner3').animate({
+                          'marginLeft': slideWidth * (-currentPosition)
+                      });
+                  });
+
+                // manageControls: Hides and Shows controls depending on currentPosition
+                function manageControls(position) {
+                    // Hide left arrow if position is first slide
+                    if (position == 0) { $('#leftControl3').hide() } else { $('#leftControl3').show() }
+                    // Hide right arrow if position is last slide
+                    if (position == numberOfSlides - 1) { $('#rightControl3').hide() } else { $('#rightControl3').show() }
+                }
+            });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var currentPosition = 0;
+            var slideWidth = 820;
+            var slides = $('.slide4');
+            var numberOfSlides = slides.length;
+
+            // Remove scrollbar in JS
+            $('#slidesContainer4').css('overflow', 'hidden');
+
+            // Wrap all .slides with #slideInner div
+            slides
+              .wrapAll('<div id="slideInner4"></div>')
+              // Float left to display horizontally, readjust .slides width
+              .css({
+                  'float': 'left',
+                  'width': slideWidth
+              });
+
+            // Set #slideInner width equal to total width of all slides
+            $('#slideInner4').css('width', slideWidth * numberOfSlides);
+
+            // Insert controls in the DOM
+            $('#slideshow4')
+              .prepend('<span class="control4" id="leftControl4">Clicking moves left</span>')
+              .append('<span class="control4" id="rightControl4">Clicking moves right</span>');
+
+            // Hide left arrow control on first load
+            manageControls(currentPosition);
+
+            // Create event listeners for .controls clicks
+            $('.control4')
+              .bind('click', function () {
+                  // Determine new position
+                  currentPosition = ($(this).attr('id') == 'rightControl4') ? currentPosition + 1 : currentPosition - 1;
+
+                  // Hide / show controls
+                  manageControls(currentPosition);
+                  // Move slideInner using margin-left
+                  $('#slideInner4').animate({
+                      'marginLeft': slideWidth * (-currentPosition)
+                  });
+              });
+
+            // manageControls: Hides and Shows controls depending on currentPosition
+            function manageControls(position) {
+                // Hide left arrow if position is first slide
+                if (position == 0) { $('#leftControl4').hide() } else { $('#leftControl4').show() }
+                // Hide right arrow if position is last slide
+                if (position == numberOfSlides - 1) { $('#rightControl4').hide() } else { $('#rightControl4').show() }
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var currentPosition = 0;
+            var slideWidth = 820;
+            var slides = $('.slide5');
+            var numberOfSlides = slides.length;
+
+            // Remove scrollbar in JS
+            $('#slidesContainer5').css('overflow', 'hidden');
+
+            // Wrap all .slides with #slideInner div
+            slides
+              .wrapAll('<div id="slideInner5"></div>')
+              // Float left to display horizontally, readjust .slides width
+              .css({
+                  'float': 'left',
+                  'width': slideWidth
+              });
+
+            // Set #slideInner width equal to total width of all slides
+            $('#slideInner5').css('width', slideWidth * numberOfSlides);
+
+            // Insert controls in the DOM
+            $('#slideshow5')
+              .prepend('<span class="control5" id="leftControl5">Clicking moves left</span>')
+              .append('<span class="control5" id="rightControl5">Clicking moves right</span>');
+
+            // Hide left arrow control on first load
+            manageControls(currentPosition);
+
+            // Create event listeners for .controls clicks
+            $('.control5')
+              .bind('click', function () {
+                  // Determine new position
+                  currentPosition = ($(this).attr('id') == 'rightControl5') ? currentPosition + 1 : currentPosition - 1;
+
+                  // Hide / show controls
+                  manageControls(currentPosition);
+                  // Move slideInner using margin-left
+                  $('#slideInner5').animate({
+                      'marginLeft': slideWidth * (-currentPosition)
+                  });
+              });
+
+            // manageControls: Hides and Shows controls depending on currentPosition
+            function manageControls(position) {
+                // Hide left arrow if position is first slide
+                if (position == 0) { $('#leftControl5').hide() } else { $('#leftControl5').show() }
+                // Hide right arrow if position is last slide
+                if (position == numberOfSlides - 1) { $('#rightControl5').hide() } else { $('#rightControl5').show() }
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var currentPosition = 0;
+            var slideWidth = 920;
+            var slides = $('.slide6');
+            var numberOfSlides = slides.length;
+
+            // Remove scrollbar in JS
+            $('#slidesContainer6').css('overflow', 'hidden');
+
+            // Wrap all .slides with #slideInner div
+            slides
+              .wrapAll('<div id="slideInner6"></div>')
+              // Float left to display horizontally, readjust .slides width
+              .css({
+                  'float': 'left',
+                  'width': slideWidth
+              });
+
+            // Set #slideInner width equal to total width of all slides
+            $('#slideInner6').css('width', slideWidth * numberOfSlides);
+
+            // Insert controls in the DOM
+            $('#slideshow6')
+              .prepend('<span class="control6" id="leftControl6">Clicking moves left</span>')
+              .append('<span class="control6" id="rightControl6">Clicking moves right</span>');
+
+            // Hide left arrow control on first load
+            manageControls(currentPosition);
+
+            // Create event listeners for .controls clicks
+            $('.control6')
+              .bind('click', function () {
+                  // Determine new position
+                  currentPosition = ($(this).attr('id') == 'rightControl6') ? currentPosition + 1 : currentPosition - 1;
+
+                  // Hide / show controls
+                  manageControls(currentPosition);
+                  // Move slideInner using margin-left
+                  $('#slideInner6').animate({
+                      'marginLeft': slideWidth * (-currentPosition)
+                  });
+              });
+
+            // manageControls: Hides and Shows controls depending on currentPosition
+            function manageControls(position) {
+                // Hide left arrow if position is first slide
+                if (position == 0) { $('#leftControl6').hide() } else { $('#leftControl6').show() }
+                // Hide right arrow if position is last slide
+                if (position == numberOfSlides - 1) { $('#rightControl6').hide() } else { $('#rightControl6').show() }
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var top = $('#page').offset().top;
+            $(window).scroll(function () {
+                var y = $(window).scrollTop();
+                if (y >= top) {
+                    $('#page').addClass('fixed');
+                }
+                else $('#page').removeClass('fixed');
+            })
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("img").mousedown(function () {
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

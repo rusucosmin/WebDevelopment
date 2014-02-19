@@ -1,0 +1,319 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video                {  border-style: none; border-color: inherit; border-width: 0; margin: 0; padding: 0; vertical-align: baseline; font-size: medium; }
+blockquote:before, blockquote:after,
+q:before, q:after                       { content: ''; content: none; }
+table                                   { border-collapse: collapse; border-spacing: 0; }
+html                                    { /*overflow-y: scroll; /* always force a scrollbar in non-IE */ }
+body                                    { background: #e3e5e5; overflow-x:hidden; height: 10067px; line-height: 1.5; color: #000; font-size: 14px; font-family: Arial,sans-serif; }
+h1                                      { color: #146df3; }
+a, a:link,
+a:active,
+a:visited                               { -webkit-transition: color 0.25s ease-out; -moz-transition: color 0.25s ease-out; -o-transition: color 0.25s ease-out; transition: color 0.25s ease-out; color:#21a97e; outline: none; text-decoration:none; }
+a:hover                                 { color:#000; }
+img                                     { display:block; }
+p                                       { text-align:justify; margin:auto; }
+h5                                      { text-indent:100px; }
+hr                                      { margin: 0; border-top: 1px solid #3b3b3b; border-bottom: 1px solid #3b3b3b; height: 10px; border-left-style: none; border-left-color: inherit; border-left-width: medium; border-right-style: none; border-right-color: inherit; border-right-width: medium; }
+
+/*Page main divs (c) Cosmin Rusu*/
+
+#presentation                           { background-color:#fff; width:100%; height:150px; }
+#sshow                                  { border-style: solid; border-width: 5px 0px 5px 0px; border-color: #0066FF; background-color: #FFFFFF; height: 460px; }
+#page                                   { border-top: 5px solid #0066FF; position: absolute;top: 615px;left: 0px;width: 100%;z-index: 100;border-left-style: none;border-left-color: #0066FF;border-right-style: none;border-right-color: #0066FF;border-bottom-style: none; border-bottom-color: #0066FF;}
+#page.fixed                             { position:fixed; top:0px; left:0px; width: 100%; }
+#content                                { z-index: 4; position: relative; width:100%; padding: 0 ; margin: 0 auto;line-height: 1.7; height: 8720px;}
+#content article                        { }
+#year19141 ,
+#year19145 ,
+#year19146 ,
+#year19142 ,
+#year19143 ,
+#year19144 ,
+#year191444 ,
+#year1914 ,
+#year1916 , #19161,
+#year1918 ,
+#year1919 ,
+#gallery                                { padding-top: 55px; }
+#year1914                               { width:900px; height:800px; margin:auto; }
+#year1915                               { width:550px; height:500px; }
+#year1916, #year19161                   { width:900px; height:800px; margin:auto;  }
+#year1917                               { width:900px; height:800px; margin:auto;  }
+#year1918                               { width:900px; height:800px; margin:auto;  }
+#year1919                               { width:900px; height:800px; margin:auto;  }
+#romania                                { position:absolute; top: 6540px; width:100%; height:768px; }
+#gallery                                { height:977px; height:750px; position:absolute; top: 7630px; left:50%; margin-left:-466px; margin-right:-466px; right:50%;}
+#content h1                             { margin: 0 0 0 0; font-size: 60px; font-family: Georgia, serif; font-weight: normal; line-height: 65px; }
+#content h2, .slide p                   { margin:0; }
+#content h2                             { letter-spacing:-1px; }
+#content img                            { border-style:solid; border-width:2px; margin:0 15px 0 10px; }
+.fooot                                  { width:100%; height:800px; background-color:#0066FF; }
+.fooot a, .fooot a:link,
+.fooot a:active,
+.fooot a:visited                        { -webkit-transition: color 0.5s all; -moz-transition: color 0.5s all; -o-transition: color 0.5s all; transition: color 0.5s all; color:#e3e502; outline: none; text-decoration:none; }
+.fooot a:hover                          { color:#3f4049; }
+
+/*Nav menu (c) Cosmin Rusu*/
+    
+nav#primary                             { z-index: 10000; position: fixed; top: 50%; right: 16px; margin-top: -40px; font-size:10px; }
+nav#primary li                          { position: relative; height: 20px; }
+nav#primary a                           { display: block; width: 20px; height: 20px; text-indent: -9999px; background: transparent url('../img/nav-dot.png') 4px 4px no-repeat; }
+nav#primary a:hover, 
+nav#primary a.active                    { background: transparent url('../img/nav-dot.png') 4px -16px no-repeat; }
+nav#primary h1                          { position: absolute; right: 22px; top: -7px; display: none; padding: 4px 20px 4px 7px;color: #fff; white-space: nowrap; background: transparent url('../img/nav-arrow.png') 100% 50% no-repeat;}
+nav.next-prev                           { width:auto; height:39px; margin: 0 0 0 0;}
+a.prev,
+a.next                                  { display: block; width: 15px; height: 11px; text-indent: -9999px;}
+a.prev                                  { margin: 0 auto 5px auto; background: transparent url('../img/scroll-arrow-up.png') 0 0 no-repeat; } 
+a.prev:hover                            { background: transparent url('../img/scroll-arrow-up.png') 0 -11px no-repeat; }
+a.next                                  { margin: 5px auto 0 auto;   background: transparent url('../img/scroll-arrow-down.png') -1px 0 no-repeat; }
+a.next:hover                            { background: transparent url('../img/scroll-arrow-down.png') -1px -11px no-repeat; }
+
+/*PopUp (c) Cosmin Rusu*/
+
+.modalBackground                        { background-color: Black; filter: alpha(opacity=90); opacity: 0.8; z-index:10000; }
+.modalPopup                             { background-color: #FFFFFF; z-index:10000; }
+
+/*Flash containter - Gallery & Top Slideshow (c) Cosmin Rusu*/
+
+#flashContent                           { width:933px; height:700px;}
+#flash_container                        { z-index:-10000; width:100%;height:460px;margin:auto; }
+
+/*Romania fullscreen slide (c) Cosmin Rusu*/
+
+.simple_slide                           { position: absolute; width: 100%; height: 100%; }
+
+#i0                                     { left: 0%;   background-color: #fff; }
+#i1                                     { left: 100%; background-color: #fff; }
+#i2                                     { left: 200%; background-color: #bbb; }
+#i3                                     { left: 300%; background-color: #777; }
+#i4                                     { left: 400%; background-color: #777; }
+#i5                                     { left: 500%; background-color: #777; }
+
+.simple_slide                           { -webkit-transition: -webkit-transform 0.8s; -moz-transition: -moz-transform 0.8s; -o-transition: -o-transform 0.8s; transition: transform 0.8s; }
+
+#a1:target .simple_slide                { -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%); }
+#a2:target .simple_slide                { -webkit-transform: translateX(-200%); -moz-transform: translateX(-200%); -o-transform: translateX(-200%); transform: translateX(-200%); }
+#a3:target .simple_slide                { -webkit-transform: translateX(-300%); -moz-transform: translateX(-300%); -o-transform: translateX(-300%); transform: translateX(-300%); }
+#a4:target .simple_slide                { -webkit-transform: translateX(-400%); -moz-transform: translateX(-400%); -o-transform: translateX(-400%); transform: translateX(-400%); }
+#a5:target .simple_slide                { -webkit-transform: translateX(-500%); -moz-transform: translateX(-500%); -o-transform: translateX(-500%); transform: translateX(-500%); }
+
+.simple_slide                           { -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%); }
+
+.backbutton                             { z-index:5; position: absolute; top: 0px; height: 80%; width: 50%;   left:0;   top:20%;}
+.nextbutton                             { z-index:5; position: absolute; top: 0px; height: 80%; width: 50%;   left:50%; top:20%;}
+.nextbutton                             { cursor: url('img/right_icon.png') ,  e-resize; right: 0;                              }
+.backbutton                             { cursor: url('img/left_icon.png') ,  e-resize; right: 0;                               }
+
+#a1:target #p1,
+#a2:target #p2,
+#a3:target #p3,
+#a4:target #p4,
+#a5:target #p5                          { background-color: red; color: #fff; }
+
+/*Team Photos, featured CSS3 (c) Cosmin Rusu*/
+
+#cosmin                                     { width:301px; height:200px; background:red; transition:width 1s, height 1s; -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* Safari */  }
+#cosmin:hover                               { width:602px; height:400px; transform:rotate(360deg);    -webkit-transform:rotate(360deg); /* Safari */  }
+#bianca                                     { width:301px; height:200px; background:red;              transition:width 1s, height 1s; -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* Safari */  }
+#bianca:hover                               { width:602px; height:400px; transform:rotate(360deg);    -webkit-transform:rotate(360deg); /* Safari */     }
+#bucsa                                      { width:200px; height:200px; background:red;              transition:width 1s, height 1s; -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* Safari */  }
+#bucsa:hover                                { width:400px; height:400px; transform:rotate(360deg);    -webkit-transform:rotate(360deg); /* Safari */     }
+#daniela                                    { width:150px; height:200px; background:red; transition:width 1s, height 1s; -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* Safari */  }
+#daniela:hover                              { width:300px; height:400px; transform:rotate(360deg);    -webkit-transform:rotate(360deg); /* Safari */  }
+#georgiana                                  { width:150px; height:200px; background:red; transition:width 1s, height 1s; -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* Safari */  }
+#georgiana:hover                            { width:300px; height:400px; transform:rotate(360deg);    -webkit-transform:rotate(360deg); /* Safari */  }
+
+#paris                                      { width:195px; height:150px; margin:auto; background:red; transition:width 1s, height 1s; -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* Safari */  }
+#paris:hover                                { width:500px; height:383px; margin:auto; transform:rotate(360deg);    -webkit-transform:rotate(360deg); /* Safari */  }
+
+#bilantul                                   { width:685px; height:551px; margin:auto; background:red; transition:width 1s, height 1s; -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* Safari */  }
+#bilantul:hover                             { width:900px; height:764px; margin:auto; transform:rotate(360deg);    -webkit-transform:rotate(360deg); /* Safari */  }
+
+#civili                                     { width:651px; height:553px; margin:auto; background:red; transition:width 1s, height 1s; -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* Safari */  }
+#civili:hover                               { width:900px; height:764px; margin:auto; transform:rotate(360deg);    -webkit-transform:rotate(360deg); /* Safari */  }
+
+#soldati                                    { width:786px; height:500px; margin:auto; background:red; transition:width 1s, height 1s; -webkit-transition:width 1s, height 1s, -webkit-transform 1s; /* Safari */  }
+#soldati:hover                              { width:900px; height:572px; margin:auto; transform:rotate(360deg);    -webkit-transform:rotate(360deg); /* Safari */  }
+
+#saintgermain
+{
+opacity:0.4;
+filter:alpha(opacity=40); /* For IE8 and earlier */
+}
+#germaine_treat:hover + #saintgermain, #saintgermain:hover {
+opacity:1.0;
+filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+/* Weapons (c) Cosmin Rusu */
+
+#f1_container {
+  float:left;
+  position: relative;
+  width: 200px;
+  height: 150px;
+  z-index: 1;
+}
+#f1_container {
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+}
+#f1_card {
+    width:100%;
+    height:100%;
+transform-style: preserve-3d;
+transition: all 1s linear 0s;
+-webkit-transform-style: preserve-3d;
+-webkit-transition: all 1.0s linear;
+-moz-transform-style: preserve-3d;
+-moz-transition: all 1.0s linear;
+-o-transform-style: preserve-3d;
+-o-transition: all 1.0s linear;
+}
+#f1_container:hover #f1_card{
+  transform: rotateY(180deg);
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+  -moz-box-shadow: -5px 5px 5px #aaa;
+  -webkit-box-shadow: -5px 5px 5px #aaa;
+}
+
+#f2_container {
+
+  float:left;
+  margin-right:10px;
+  margin-left:10px;
+  position: relative;
+  width: 93px;
+  height: 150px;
+  z-index: 1;
+}
+#f2_container {
+    
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+}
+#f2_card {
+    
+    width:100%;
+    height:100%;
+transform-style: preserve-3d;
+transition: all 1.0s linear;
+-webkit-transform-style: preserve-3d;
+-webkit-transition: all 1.0s linear;
+-moz-transform-style: preserve-3d;
+-moz-transition: all 1.0s linear;
+-o-transform-style: preserve-3d;
+-o-transition: all 1.0s linear;
+}
+#f2_container:hover #f2_card{
+  transform: rotateY(180deg);
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+  -moz-box-shadow: -5px 5px 5px #aaa;
+  -webkit-box-shadow: -5px 5px 5px #aaa;
+}
+
+#f3_container {
+  position: relative;
+  float:left;
+  width: 125px;
+  height: 150px;
+  z-index: 1;
+}
+#f3_container {
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    -o-perspective: 1000px;
+}
+#f3_card {
+    
+    width:100%;
+    height:100%;
+transform-style: preserve-3d;
+transition: all 1.0s linear;
+-webkit-transform-style: preserve-3d;
+-webkit-transition: all 1.0s linear;
+-moz-transform-style: preserve-3d;
+-moz-transition: all 1.0s linear;
+-o-transform-style: preserve-3d;
+-o-transition: all 1.0s linear;
+}
+#f3_container:hover #f3_card{
+  transform: rotateY(180deg);
+  -webkit-transform:rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  -ms-transform:rotateY(180deg);
+  box-shadow: -5px 5px 5px #aaa;
+  -moz-box-shadow: -5px 5px 5px #aaa;
+  -webkit-box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+}
+.face.back {
+display: block;
+transform: rotateY(180deg);
+-webkit-transform: rotateY(180deg);
+-moz-transform: rotateY(180deg);
+-o-transform: rotateY(180deg);
+
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+padding: 10px;
+color: white;
+text-align: center;
+background-color: #aaa;
+}
+
+#cf {
+  position:relative;
+  height:450px;
+  width:760px;
+  margin:0 auto;
+}
+
+#cf img {
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+#cf img.top:hover {
+  opacity:0;
+}
+.slide6 h3 {
+    text-align: center;
+}
